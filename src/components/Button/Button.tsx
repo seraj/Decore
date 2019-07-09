@@ -1,9 +1,9 @@
-import * as React from 'react';
-import StyledButton from './styled/StyledButton';
+import * as React from "react";
+import StyledButton from "./styled/StyledButton";
 
 export interface ButtonProps {
   /** Callback function to be called when user clicks on button */
-  onClick: () => void;
+  onClick?: () => void;
   children: React.ReactNode;
   /** Renders a disabled button and prevents onClick */
   disabled?: boolean;
@@ -15,18 +15,22 @@ export interface ButtonProps {
   big?: boolean;
   /** Simple Button */
   simple?: boolean;
+  /** additional class for button */
+  className?: string;
 }
 
 const Button: React.SFC<ButtonProps> = ({
   children,
+  className,
   disabled = false,
   onClick,
   secondary = false,
   big = false,
   radius = 0,
-  simple = false,
+  simple = false
 }) => (
   <StyledButton
+    className={className}
     disabled={disabled}
     onClick={onClick}
     secondary={secondary}
