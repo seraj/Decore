@@ -1,7 +1,7 @@
-import { darken } from "polished";
-import styled from "../../../utils/styled-components";
+import { darken } from 'polished';
+import styled from '../../../utils/styled-components';
 
-const StyledButton = styled("button")<{
+const StyledButton = styled('button')<{
   disabled: boolean;
   secondary: boolean;
   radius: number;
@@ -22,7 +22,7 @@ const StyledButton = styled("button")<{
   text-align: center;
   cursor: ${disabled ? `not-allowed` : `pointer`};
   transition: 0.3s;
-  border-radius: ${`${radius}px` || "0"};
+  border-radius: ${`${radius}px` || '0'};
   background: ${
     disabled
       ? theme.colors.disabledColor
@@ -58,7 +58,7 @@ const StyledButton = styled("button")<{
               0.2,
               secondary
                 ? theme.colors.secondaryColor
-                : theme.colors.successColor
+                : theme.colors.successColor,
             )
       };
     background-color: ${
@@ -66,7 +66,7 @@ const StyledButton = styled("button")<{
         ? theme.colors.disabledColor
         : darken(
             0.2,
-            secondary ? theme.colors.secondaryColor : theme.colors.successColor
+            secondary ? theme.colors.secondaryColor : theme.colors.successColor,
           )
     };
     svg {
@@ -77,14 +77,14 @@ const StyledButton = styled("button")<{
     border: 1.5px solid
       ${darken(
         0.3,
-        secondary ? theme.colors.secondaryColor : theme.colors.successColor
+        secondary ? theme.colors.secondaryColor : theme.colors.successColor,
       )};
     background-color: ${
       disabled
         ? theme.colors.disabledColor
         : darken(
             0.3,
-            secondary ? theme.colors.secondaryColor : theme.colors.successColor
+            secondary ? theme.colors.secondaryColor : theme.colors.successColor,
           )
     };
     box-shadow: none !important;

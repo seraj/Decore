@@ -1,5 +1,5 @@
-import * as React from "react";
-import StyledButton from "./styled/StyledButton";
+import * as React from 'react';
+import StyledButton from './styled/StyledButton';
 
 export interface ButtonProps {
   /** Callback function to be called when user clicks on button */
@@ -27,7 +27,7 @@ const Button: React.SFC<ButtonProps> = ({
   secondary = false,
   big = false,
   radius = 0,
-  simple = false
+  simple = false,
 }) => (
   <StyledButton
     className={className}
