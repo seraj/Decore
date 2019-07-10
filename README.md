@@ -1,6 +1,6 @@
 # Decore
 
-The perfect boilerplate to help you to create your own React UI Kit.
+Logickit UI KIT package.
 
 ## Features
 
@@ -8,7 +8,7 @@ The perfect boilerplate to help you to create your own React UI Kit.
 - Components generators
 - Development Environment: [Storybook](https://storybook.js.org/)
 - Styles: [Styled Components](https://www.styled-components.com/) with theming configuration
-- Lint: [TSLint](https://palantir.github.io/tslint/)
+- Lint: [typescript eslint](https://github.com/typescript-eslint/typescript-eslint)
 - Tests: [Jest](https://jestjs.io/)
 
 ## Quick start

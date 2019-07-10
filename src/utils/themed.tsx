@@ -4,6 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 
 const themed = (component: JSX.Element) =>
-  renderer.create(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
+    renderer.create(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
 
 export default themed;
