@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint"
+      "pre-push": "npm run compile"
     }
   },
   "repository": {
@@ -86,9 +86,6 @@
     "style-loader": "0.23.1",
     "ts-jest": "^23.10.1",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.3.6",
-    "webpack-merge": "^4.2.1"
+    "typescript": "^3.5.3"
   }
 }

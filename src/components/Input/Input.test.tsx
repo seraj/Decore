@@ -4,13 +4,13 @@ import themed from "../../utils/themed";
 import Input from "./Input";
 
 describe("Input", () => {
-  it("should render correctly", () => {
-    const component = themed(
-      <Input>
+    it("should render correctly", () => {
+        const component = themed(
+            <Input>
         Test
-      </Input>,
-    ).toJSON();
+            </Input>,
+        ).toJSON();
 
-    expect(component).toMatchSnapshot();
-  });
+        expect(component).toMatchSnapshot();
+    });
 });

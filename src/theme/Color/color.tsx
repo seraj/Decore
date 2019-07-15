@@ -2,8 +2,8 @@ import * as React from "react";
 import styled from "../../utils/styled-components";
 
 export interface ColorProps {
-  color: string;
-  name: string;
+    color: string;
+    name: string;
 }
 
 const ColorBox = styled("div")<{ color: string }>`
@@ -35,10 +35,10 @@ const Wrapper = styled("div")`
 `;
 
 const Color: React.FC<ColorProps> = ({ color, name }) => (
-  <Wrapper>
-    <ColorBox color={color} />
-    <ColorName>{name}</ColorName>
-  </Wrapper>
+    <Wrapper>
+        <ColorBox color={color} />
+        <ColorName>{name}</ColorName>
+    </Wrapper>
 );
 
 export default Color;

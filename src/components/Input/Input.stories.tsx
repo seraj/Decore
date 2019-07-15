@@ -8,10 +8,10 @@ const stories = storiesOf("Components/Input", module);
 stories.addDecorator(withKnobs);
 
 stories.add(
-"default",
-wInfo()(() => (
-<Input>
-  {text("Label", "Default")}
-</Input>
-)),
+    "default",
+    wInfo()(() => (
+        <Input>
+            {text("Label", "Default")}
+        </Input>
+    )),
 );
