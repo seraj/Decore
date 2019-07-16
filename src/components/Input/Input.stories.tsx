@@ -18,7 +18,6 @@ stories.add(
             className={text("className", "")}
             disabled={boolean("disabled", false)}
             simple={boolean("simple", false)}
-            big={boolean("big", false)}
             radius={number("border-radius", 0)} />
     )),
 );

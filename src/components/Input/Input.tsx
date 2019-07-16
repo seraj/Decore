@@ -4,11 +4,15 @@ import StyledInput from "./styled/StyledInput";
 interface InputProps {
     defaultValue?: string;
     value?: string;
+    /** Additional classes */
     className?: string;
+    /** Renders a disabled button and prevents future behavior */
     disabled?: boolean;
+    /** Will render a simple input without styles */
     simple?: boolean;
+    /** Change radius of input */
     radius?: number;
-    big?: boolean;
+    /** Callback function to change the value */
     onChange?: () => void
 }
 
@@ -17,7 +21,6 @@ const Input: React.FC<InputProps> = ({
     disabled = false,
     simple = false,
     radius = 0,
-    big = false,
     defaultValue = '',
     value = '',
     onChange
@@ -29,7 +32,6 @@ const Input: React.FC<InputProps> = ({
         disabled={disabled}
         simple={simple}
         radius={radius}
-        big={big}
         onChange={onChange} />
 );
 

@@ -3,7 +3,6 @@ import styled from "../../../utils/styled-components";
 const StyledInput = styled("input")<{
   disabled: boolean;
   radius: number;
-  big: boolean;
   simple: boolean;
 }>`
   ${({ disabled, radius, simple }) => 
