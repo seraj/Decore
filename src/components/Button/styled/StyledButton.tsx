@@ -8,7 +8,7 @@ radius: number;
 big: boolean;
 simple: boolean;
 }>`
-  ${({ disabled, secondary, radius, big, simple, theme }) =>
+  ${({ disabled, secondary, radius, big, simple }) =>
         simple
             ? ``
             : `
@@ -23,73 +23,35 @@ simple: boolean;
   cursor: ${disabled ? `not-allowed` : `pointer`};
   transition: 0.3s;
   border-radius: ${`${radius}px` || "0"};
-  background: ${
-    disabled
-        ? theme.colors.disabledColor
-        : secondary
-            ? theme.colors.secondaryColor
-            : theme.colors.successColor
-};
-  color: ${
-    disabled ? darken(0.3, theme.colors.disabledColor) : theme.colors.white
-};
+  background: ${disabled ? "#bdc3c7" : secondary ? "#ff8686" : "#3abf7c"};
+  color: ${disabled ? darken(0.3, "#bdc3c7") : "#fff"};
   border: 1.5px solid
-    ${
-    disabled
-        ? theme.colors.disabledColor
-        : secondary
-            ? theme.colors.secondaryColor
-            : theme.colors.successColor
-};
+    ${disabled ? "#bdc3c7" : secondary ? "#ff8686" : "#3abf7c"};
 
   svg {
     margin-right: 10px;
   }
   &:hover {
     text-decoration: none;
-    color: ${
-    disabled ? darken(0.3, theme.colors.disabledColor) : theme.colors.white
-};
+    color: ${disabled ? darken(0.3, "#bdc3c7") : "#fff"};
     border: 1.5px solid
-      ${
-    disabled
-        ? theme.colors.disabledColor
-        : darken(
-            0.2,
-            secondary
-                ? theme.colors.secondaryColor
-                : theme.colors.successColor
-        )
-};
+      ${disabled ? "#bdc3c7" : darken(0.2, secondary ? "#ff8686" : "#3abf7c")};
     background-color: ${
-    disabled
-        ? theme.colors.disabledColor
-        : darken(
-            0.2,
-            secondary ? theme.colors.secondaryColor : theme.colors.successColor
-        )
+    disabled ? "#bdc3c7" : darken(0.2, secondary ? "#ff8686" : "#3abf7c")
 };
     svg {
-      color: ${disabled ? theme.colors.disabledColor : theme.colors.white};
+      color: ${disabled ? "#bdc3c7" : "#fff"};
     }
   }
   &:active {
     border: 1.5px solid
-      ${darken(
-        0.3,
-        secondary ? theme.colors.secondaryColor : theme.colors.successColor
-    )};
+      ${darken(0.3, secondary ? "#ff8686" : "#3abf7c")};
     background-color: ${
-    disabled
-        ? theme.colors.disabledColor
-        : darken(
-            0.3,
-            secondary ? theme.colors.secondaryColor : theme.colors.successColor
-        )
+    disabled ? "#bdc3c7" : darken(0.3, secondary ? "#ff8686" : "#3abf7c")
 };
     box-shadow: none !important;
     svg {
-      color: ${theme.colors.white};
+      color: ${"#fff"};
     }
   }
   &.light {

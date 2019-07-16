@@ -22,7 +22,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules(?!\/@storybook\/addon-info)/,
         use: ["style-loader", "css-loader"]
       }
     ]

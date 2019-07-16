@@ -7,6 +7,8 @@
   "scripts": {
     "compile": "tsc",
     "test": "jest",
+    "copycss": "copyfiles -u 1 src/assets/css/*.css build/lib",
+    "build": "npm run compile && npm run copycss",
     "lint": "eslint . --ext .ts,.tsx --fix",
     "generate": "plop --plopfile ./.plop/plop.config.js",
     "deploy-storybook": "storybook-to-ghpages",
@@ -15,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run compile"
+      "pre-push": "npm run build"
     }
   },
   "repository": {
@@ -36,11 +38,14 @@
   },
   "homepage": "https://github.com/logickit-io/Decore#readme",
   "dependencies": {
+    "@types/bootstrap": "^4.3.1",
+    "@types/reactstrap": "^8.0.1",
+    "bootstrap": "^4.3.1",
+    "polished": "^3.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "styled-components": "^4.2.0",
-    "reactstrap": "^6.4.0",
-    "polished": "^3.4.0"
+    "reactstrap": "^8.0.1",
+    "styled-components": "^4.2.0"
   },
   "peerDependencies": {
     "react": "^16.8.4",
@@ -69,6 +74,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",
     "cache-loader": "^1.2.2",
+    "copyfiles": "^2.1.1",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
