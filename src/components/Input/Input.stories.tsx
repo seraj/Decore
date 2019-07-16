@@ -1,4 +1,5 @@
-import { text, withKnobs } from "@storybook/addon-knobs";
+import { text, withKnobs, boolean, number } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 import wInfo from "../../utils/wInfo";
@@ -10,8 +11,14 @@ stories.addDecorator(withKnobs);
 stories.add(
     "default",
     wInfo()(() => (
-        <Input>
-            {text("Label", "Default")}
-        </Input>
+        <Input
+            onChange={action("onChange")}
+            defaultValue={text("defaultValue", "")}
+            value={text("defaultValue", "")}
+            className={text("className", "")}
+            disabled={boolean("disabled", false)}
+            simple={boolean("simple", false)}
+            big={boolean("big", false)}
+            radius={number("border-radius", 0)} />
     )),
 );
