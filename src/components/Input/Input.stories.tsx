@@ -18,7 +18,6 @@ stories.add(
       value={text("defaultValue", "")}
       className={text("className", "")}
       disabled={boolean("disabled", false)}
-      simple={boolean("simple", false)}
       radius={number("border-radius", 0)}
     />
   ))

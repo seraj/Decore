@@ -15,7 +15,6 @@ stories.add(
       className={text("className", "")}
       disabled={boolean("Disabled", false)}
       secondary={boolean("Secondary", false)}
-      simple={boolean("Simple", false)}
       big={boolean("Big", false)}
       radius={number("Border Radius", 0)}
       onClick={action("onClick")}
