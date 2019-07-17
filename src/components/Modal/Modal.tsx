@@ -5,7 +5,6 @@ import ModalProps from "./Modal.props";
 const Modal: React.FC<ModalProps> = ({
   children,
   isOpen = false,
-  toggle,
   ...props
 }) => (
   <StyledModal isOpen={isOpen} {...props}>

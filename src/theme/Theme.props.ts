@@ -6,11 +6,6 @@ export enum Size {
   huge = "huge"
 }
 
-export interface HTMLProps<T>
-  extends React.DOMAttributes<T>,
-    React.AriaAttributes,
-    React.HTMLAttributes<T> {}
-
 export default interface ThemeProps {
   /** change the background of Button to our secondary Color */
   secondary?: boolean;
