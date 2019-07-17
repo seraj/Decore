@@ -1,9 +1,8 @@
 import Modal from "reactstrap/lib/Modal";
 import ModalHeader from "reactstrap/lib/ModalHeader";
 import ModalBody from "reactstrap/lib/ModalBody";
-import ModalProps from "../Modal.props"
-
-import styled, { css } from "../../../utils/styled-components";
+import styled, { css } from "styled-components";
+import ModalProps from "../Modal.props";
 
 const ModalContent = css`
   .modal-content {

@@ -5,11 +5,7 @@ import Input from "./Input";
 
 describe("Input", () => {
     it("should render correctly", () => {
-        const component = themed(
-            <Input>
-        Test
-            </Input>,
-        ).toJSON();
+        const component = themed(<Input>Test</Input>).toJSON();
 
         expect(component).toMatchSnapshot();
     });

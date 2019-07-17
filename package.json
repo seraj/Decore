@@ -9,7 +9,8 @@
     "test": "jest",
     "copycss": "copyfiles -u 1 src/assets/css/*.css build/lib",
     "build": "npm run compile && npm run copycss",
-    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint": "eslint src --ext .ts,.tsx --fix",
+    "format": "prettier --write '**/*.{js,jsx,css,scss,tsx,ts}'",
     "generate": "plop --plopfile ./.plop/plop.config.js",
     "deploy-storybook": "storybook-to-ghpages",
     "storybook": "start-storybook -p 4008",
@@ -17,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run build"
+      "pre-commit": "npm run format && npm run lint"
     }
   },
   "repository": {
@@ -72,6 +73,7 @@
     "@typescript-eslint/parser": "^1.11.0",
     "@typescript-eslint/typescript-estree": "^1.11.0",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.5",
     "cache-loader": "^1.2.2",
     "copyfiles": "^2.1.1",

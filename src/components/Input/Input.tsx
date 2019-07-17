@@ -1,15 +1,14 @@
 import * as React from "react";
 import StyledInput from "./styled/StyledInput";
-import InputProps from "./Input.props"
+import InputProps from "./Input.props";
 
 const Input: React.FC<InputProps> = ({
     className,
-    type = 'text',
+    type = "text",
     disabled = false,
-    simple = false,
     radius = 0,
-    defaultValue = '',
-    value = '',
+    defaultValue = "",
+    value = "",
     onChange
 }) => (
     <StyledInput
@@ -18,9 +17,9 @@ const Input: React.FC<InputProps> = ({
         value={value}
         className={className}
         disabled={disabled}
-        simple={simple}
         radius={radius}
-        onChange={onChange} />
+        onChange={onChange}
+    />
 );
 
 export default Input;

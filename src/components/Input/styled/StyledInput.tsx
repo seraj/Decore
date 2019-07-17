@@ -1,5 +1,5 @@
-import styled from "../../../utils/styled-components";
-import InputProps from "../Input.props"
+import styled from "styled-components";
+import InputProps from "../Input.props";
 
 const StyledInput = styled.input<InputProps>`
   ${({ radius }) => `
@@ -14,7 +14,7 @@ const StyledInput = styled.input<InputProps>`
       cursor: not-allowed !important;
       opacity: 0.5 !important;
     }
-  `
-}`;
+  `}
+`;
 
 export default StyledInput;

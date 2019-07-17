@@ -1,10 +1,10 @@
 import { darken } from "polished";
-import styled from "../../../utils/styled-components";
-import ButtonProps from "../Button.props"
+import styled from "styled-components";
+import ButtonProps from "../Button.props";
 
 const StyledButton = styled.button<ButtonProps>`
   ${({ disabled, secondary, radius, big, theme }) =>
-  `
+        `
   display: flex;
   flex-direction: row;
   padding: 0.4rem 1.2rem;
@@ -16,10 +16,22 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: ${disabled ? `not-allowed` : `pointer`};
   transition: 0.3s;
   border-radius: ${`${radius}px` || "0"};
-  background: ${disabled ? theme.colors.disabled : secondary ? theme.colors.secondary : theme.colors.primary};
+  background: ${
+    disabled
+        ? theme.colors.disabled
+        : secondary
+            ? theme.colors.secondary
+            : theme.colors.primary
+};
   color: ${disabled ? darken(0.3, theme.colors.disabled) : theme.colors.text};
   border: 1.5px solid
-    ${disabled ? theme.colors.disabled : secondary ? theme.colors.secondary : theme.colors.primary};
+    ${
+    disabled
+        ? theme.colors.disabled
+        : secondary
+            ? theme.colors.secondary
+            : theme.colors.primary
+};
 
   svg {
     margin-right: 10px;
@@ -32,29 +44,46 @@ const StyledButton = styled.button<ButtonProps>`
     border: none;
   }
 
-  ${disabled ? `` : `
+  ${
+    disabled
+        ? ``
+        : `
     &:hover {
       text-decoration: none;
       color: ${theme.colors.text};
       border: 1.5px solid
-        ${darken(0.2, secondary ? theme.colors.secondary : theme.colors.primary)};
+        ${darken(
+        0.2,
+        secondary ? theme.colors.secondary : theme.colors.primary
+    )};
       background-color: 
-        ${darken(0.2, secondary ? theme.colors.secondary : theme.colors.primary)};
+        ${darken(
+        0.2,
+        secondary ? theme.colors.secondary : theme.colors.primary
+    )};
       svg {
         color: ${theme.colors.text};
       }
     }
     &:active {
       border: 1.5px solid
-        ${darken(0.3, secondary ? theme.colors.secondary : theme.colors.primary)};
+        ${darken(
+        0.3,
+        secondary ? theme.colors.secondary : theme.colors.primary
+    )};
       background-color:
-        ${darken(0.3, secondary ? theme.colors.secondary : theme.colors.primary)};
+        ${darken(
+        0.3,
+        secondary ? theme.colors.secondary : theme.colors.primary
+    )};
       box-shadow: none !important;
       svg {
         color: ${theme.colors.text};
       }
     }
+  `
+}
   `}
-  `}`;
+`;
 
 export default StyledButton;

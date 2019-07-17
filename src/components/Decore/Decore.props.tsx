@@ -1,6 +1,6 @@
 export default interface DecoreProps {
-  /** the theme object */
-  theme: object;
+    /** the theme object */
+    theme: object;
 
-  children?: React.ReactChild;
+    children?: React.ReactChild;
 }
