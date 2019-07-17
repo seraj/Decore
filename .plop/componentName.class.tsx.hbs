@@ -1,17 +1,10 @@
 import * as React from "react";
 import Styled{{ properCase name }} from "./styled/Styled{{ properCase name }}";
+import {{ properCase name}}Props from "./{{ properCase name }}.props";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-class {{ properCase name }} extends React.Component<Props, {}> {
+class {{ properCase name }} extends React.Component<{{ properCase name}}Props, {}> {
   public render() {
-    return (
-      <Styled{{ properCase name }}>
-        {this.props.children}
-      </Styled{{ properCase name }}>
-    );
+    return <Styled{{ properCase name }}>{this.props.children}</Styled{{ properCase name }}>;
   }
 }
 

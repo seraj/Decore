@@ -4,7 +4,7 @@ import ButtonProps from "../Button.props";
 
 const StyledButton = styled.button<ButtonProps>`
   ${({ disabled, secondary, radius, big, theme }) =>
-        `
+    `
   display: flex;
   flex-direction: row;
   padding: 0.4rem 1.2rem;
@@ -18,20 +18,20 @@ const StyledButton = styled.button<ButtonProps>`
   border-radius: ${`${radius}px` || "0"};
   background: ${
     disabled
-        ? theme.colors.disabled
-        : secondary
-            ? theme.colors.secondary
-            : theme.colors.primary
-};
+      ? theme.colors.disabled
+      : secondary
+      ? theme.colors.secondary
+      : theme.colors.primary
+  };
   color: ${disabled ? darken(0.3, theme.colors.disabled) : theme.colors.text};
   border: 1.5px solid
     ${
-    disabled
+      disabled
         ? theme.colors.disabled
         : secondary
-            ? theme.colors.secondary
-            : theme.colors.primary
-};
+        ? theme.colors.secondary
+        : theme.colors.primary
+    };
 
   svg {
     margin-right: 10px;
@@ -46,21 +46,21 @@ const StyledButton = styled.button<ButtonProps>`
 
   ${
     disabled
-        ? ``
-        : `
+      ? ``
+      : `
     &:hover {
       text-decoration: none;
       color: ${theme.colors.text};
       border: 1.5px solid
         ${darken(
-        0.2,
-        secondary ? theme.colors.secondary : theme.colors.primary
-    )};
+          0.2,
+          secondary ? theme.colors.secondary : theme.colors.primary
+        )};
       background-color: 
         ${darken(
-        0.2,
-        secondary ? theme.colors.secondary : theme.colors.primary
-    )};
+          0.2,
+          secondary ? theme.colors.secondary : theme.colors.primary
+        )};
       svg {
         color: ${theme.colors.text};
       }
@@ -68,21 +68,21 @@ const StyledButton = styled.button<ButtonProps>`
     &:active {
       border: 1.5px solid
         ${darken(
-        0.3,
-        secondary ? theme.colors.secondary : theme.colors.primary
-    )};
+          0.3,
+          secondary ? theme.colors.secondary : theme.colors.primary
+        )};
       background-color:
         ${darken(
-        0.3,
-        secondary ? theme.colors.secondary : theme.colors.primary
-    )};
+          0.3,
+          secondary ? theme.colors.secondary : theme.colors.primary
+        )};
       box-shadow: none !important;
       svg {
         color: ${theme.colors.text};
       }
     }
   `
-}
+  }
   `}
 `;
 

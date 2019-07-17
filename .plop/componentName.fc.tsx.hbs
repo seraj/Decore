@@ -1,16 +1,9 @@
 import * as React from "react";
 import Styled{{ properCase name }} from "./styled/Styled{{ properCase name }}";
+import {{ properCase name}}Props from "./{{ properCase name }}.props";
 
-interface Props {
-children: React.ReactNode;
-}
+const {{ properCase name }}: React.FC<{{ properCase name }}Props> = ({ children }) => (
+  <Styled{{ properCase name}}>{children}</Styled{{ properCase name }}>
+);
 
-const {{ properCase name }}: React.FC<Props> = ({
-  children,
-  }) => (
-  <Styled{{ properCase name }}>
-    {children}
-  </Styled{{ properCase name }}>
-  );
-
-  export default {{ properCase name }};
+export default {{ properCase name }};

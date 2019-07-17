@@ -1,5 +1,5 @@
 {
-  "name": "decore",
+  "name": "logickit-decore",
   "version": "1.0.0",
   "description": "Decore is Logickit UI KIT Package",
   "main": "build/lib/index.js",

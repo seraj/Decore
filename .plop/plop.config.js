@@ -50,6 +50,13 @@ const componentGenerator = {
           "../src/components/{{properCase name}}/{{properCase name}}.stories.tsx",
         templateFile: "./componentName.story.tsx.hbs",
         abortOnFail: true
+      },
+      {
+        type: "add",
+        path:
+          "../src/components/{{properCase name}}/{{properCase name}}.props.ts",
+        templateFile: "./componentName.props.ts.hbs",
+        alertOnFail: true
       }
     ];
 

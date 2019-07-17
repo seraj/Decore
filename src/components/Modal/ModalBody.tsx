@@ -2,11 +2,11 @@ import * as React from "react";
 import { StyledModalBody } from "./styled/StyledModal";
 
 export interface ModalBodyProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const ModalBody: React.FC<ModalBodyProps> = ({ children }) => (
-    <StyledModalBody>{children}</StyledModalBody>
+  <StyledModalBody>{children}</StyledModalBody>
 );
 
 export default ModalBody;

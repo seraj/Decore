@@ -11,13 +11,13 @@ const stories = storiesOf("Components/Modal", module);
 stories.addDecorator(withKnobs);
 
 stories.add(
-    "default",
-    wInfo()(() => (
-        <Modal isOpen={boolean("isOpen", false)} toggle={action("toggle")}>
-            <ModalHeader toggle={action("toggle")}>
-                {text("title", "Title")}
-            </ModalHeader>
-            <ModalBody>{text("Label", "Content")}</ModalBody>
-        </Modal>
-    ))
+  "default",
+  wInfo()(() => (
+    <Modal isOpen={boolean("isOpen", false)} toggle={action("toggle")}>
+      <ModalHeader toggle={action("toggle")}>
+        {text("title", "Title")}
+      </ModalHeader>
+      <ModalBody>{text("Label", "Content")}</ModalBody>
+    </Modal>
+  ))
 );

@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as renderer from "react-test-renderer";
-import { ThemeProvider } from "styled-components";
+import Decore from "../components/Decore";
 import theme from "../theme";
 
 const themed = (component: JSX.Element) =>
-    renderer.create(<ThemeProvider theme={theme}>{component}</ThemeProvider>);
+  renderer.create(<Decore theme={theme}>{component}</Decore>);
 
 export default themed;
