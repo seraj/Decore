@@ -12,6 +12,7 @@ stories.add(
     "default",
     wInfo()(() => (
         <Input
+            type={text("type", "text")}
             onChange={action("onChange")}
             defaultValue={text("defaultValue", "")}
             value={text("defaultValue", "")}

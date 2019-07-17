@@ -13,11 +13,14 @@ interface InputProps {
     /** Change radius of input */
     radius?: number;
     /** Callback function to change the value */
-    onChange?: () => void
+    onChange?: () => void,
+    /** set type of input */
+    type?: string;
 }
 
 const Input: React.FC<InputProps> = ({
     className,
+    type = 'text',
     disabled = false,
     simple = false,
     radius = 0,
@@ -26,6 +29,7 @@ const Input: React.FC<InputProps> = ({
     onChange
 }) => (
     <StyledInput
+        type={type}
         defaultValue={defaultValue}
         value={value}
         className={className}
