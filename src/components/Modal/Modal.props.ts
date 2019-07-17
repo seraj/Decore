@@ -1,11 +1,11 @@
-export default interface ModalProps {
+import ThemeProps from "../../theme/Theme.props";
+
+export default interface ModalProps
+  extends ThemeProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   /** callback for toggling isOpen in the controlling component */
   toggle?: () => void;
-  children?: React.ReactNode;
   /** boolean to Modal or not */
   isOpen?: boolean;
   /** Modal Title */
   title?: string;
-  /** additional class */
-  className?: string;
 }

@@ -6,9 +6,9 @@ const Modal: React.FC<ModalProps> = ({
   children,
   isOpen = false,
   toggle,
-  className
+  ...props
 }) => (
-  <StyledModal isOpen={isOpen} className={className}>
+  <StyledModal isOpen={isOpen} {...props}>
     {children}
   </StyledModal>
 );

@@ -13,10 +13,7 @@ stories.add(
   wInfo()(() => (
     <Input
       type={text("type", "text")}
-      onChange={action("onChange")}
       defaultValue={text("defaultValue", "")}
-      value={text("defaultValue", "")}
-      className={text("className", "")}
       disabled={boolean("disabled", false)}
       radius={number("border-radius", 0)}
     />

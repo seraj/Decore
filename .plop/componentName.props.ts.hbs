@@ -1,4 +1,3 @@
-export default interface {{ properCase name }}Props {
-  /** Children elements */
-  children?: React.ReactChild;
-}
+import ThemeProps from "../../theme/Theme.props";
+
+export default interface {{ properCase name }}Props extends ThemeProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}

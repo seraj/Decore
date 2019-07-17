@@ -65,9 +65,7 @@ exports[`Button should render correctly 1`] = `
 
 <button
   className="c0"
-  disabled={false}
   onClick={[Function]}
-  radius={0}
 >
   Test
 </button>

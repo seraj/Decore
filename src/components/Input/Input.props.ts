@@ -1,14 +1,8 @@
-export default interface InputProps {
-  defaultValue?: string;
-  value?: string;
-  /** Additional classes */
-  className?: string;
-  /** Renders a disabled button and prevents future behavior */
-  disabled?: boolean;
-  /** Change radius of input */
-  radius?: number;
-  /** Callback function to change the value */
-  onChange?: () => void;
-  /** set type of input */
-  type?: string;
-}
+import ThemeProps from "../../theme/Theme.props";
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export default interface InputProps
+  extends ThemeProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {}

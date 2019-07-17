@@ -1,11 +1,11 @@
 import * as React from "react";
 
 import themed from "../../utils/themed";
-import Input from "./Input";
+import Checkbox from "./Checkbox";
 
-describe("Input", () => {
+describe("Checkbox", () => {
   it("should render correctly", () => {
-    const component = themed(<Input />).toJSON();
+    const component = themed(<Checkbox>Test</Checkbox>).toJSON();
 
     expect(component).toMatchSnapshot();
   });

@@ -7,7 +7,7 @@ const StyledInput = styled.input<InputProps>`
     background-color: #eee;
     padding: 1.5rem 0.8rem;
     height: 45px;
-    border-radius: ${`${radius}px` || "0"};
+    border-radius: ${radius || 0}px;
 
     &[disabled] {
       color: rgba(0, 0, 0, 0.25) !important;

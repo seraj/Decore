@@ -2,8 +2,8 @@ import * as React from "react";
 import Styled{{ properCase name }} from "./styled/Styled{{ properCase name }}";
 import {{ properCase name}}Props from "./{{ properCase name }}.props";
 
-const {{ properCase name }}: React.FC<{{ properCase name }}Props> = ({ children }) => (
-  <Styled{{ properCase name}}>{children}</Styled{{ properCase name }}>
+const {{ properCase name }}: React.FC<{{ properCase name }}Props> = ({ children, ...props }) => (
+  <Styled{{ properCase name}} {...props}>{children}</Styled{{ properCase name }}>
 );
 
 export default {{ properCase name }};

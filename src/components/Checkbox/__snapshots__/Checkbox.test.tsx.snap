@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input should render correctly 1`] = `
+exports[`Checkbox should render correctly 1`] = `
 .c0 {
   border: none;
   background-color: #eee;
@@ -16,6 +16,9 @@ exports[`Input should render correctly 1`] = `
 }
 
 <input
-  className="c0"
-/>
+  className="sc-bwzfXH c0"
+  type="checkbox"
+>
+  Test
+</input>
 `;

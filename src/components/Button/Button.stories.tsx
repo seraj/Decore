@@ -1,7 +1,14 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, number, text, withKnobs } from "@storybook/addon-knobs";
+import {
+  boolean,
+  number,
+  text,
+  withKnobs,
+  select
+} from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
+import { Size } from "../../theme/Theme.props";
 import wInfo from "../../utils/wInfo";
 import Button from "./Button";
 
@@ -12,10 +19,13 @@ stories.add(
   "default",
   wInfo()(() => (
     <Button
-      className={text("className", "")}
       disabled={boolean("Disabled", false)}
       secondary={boolean("Secondary", false)}
-      big={boolean("Big", false)}
+      dSize={select(
+        "Size",
+        [Size.mini, Size.small, Size.normal, Size.big, Size.huge],
+        Size.normal
+      )}
       radius={number("Border Radius", 0)}
       onClick={action("onClick")}
     >
