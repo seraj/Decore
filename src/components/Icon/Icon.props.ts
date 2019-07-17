@@ -1,6 +1,5 @@
 import ThemeProps from "../../theme/Theme.props";
+import "react-inlinesvg";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export default interface ButtonProps
-  extends ThemeProps,
-    React.ButtonHTMLAttributes<HTMLButtonElement> {}
+export default interface IconProps extends ThemeProps, InlineSVG.Props {}

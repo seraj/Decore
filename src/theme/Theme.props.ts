@@ -11,18 +11,13 @@ export interface HTMLProps<T>
     React.AriaAttributes,
     React.HTMLAttributes<T> {}
 
-export interface Internal {
+export default interface ThemeProps {
   /** change the background of Button to our secondary Color */
   secondary?: boolean;
 
   radius?: number;
 
   dSize?: Size;
+
+  light?: boolean;
 }
-
-type ThemeProps<
-  T extends React.HTMLAttributes<E>,
-  E extends HTMLElement
-> = Internal & T;
-
-export default ThemeProps;

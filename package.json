@@ -41,6 +41,7 @@
   "homepage": "https://github.com/logickit-io/Decore#readme",
   "dependencies": {
     "@types/bootstrap": "^4.3.1",
+    "@types/react-inlinesvg": "^0.8.1",
     "@types/react-lazyload": "^2.5.0",
     "@types/react-transition-group": "^2.9.2",
     "@types/reactstrap": "^8.0.1",
@@ -48,6 +49,7 @@
     "polished": "^3.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-inlinesvg": "^0.8.4",
     "react-lazyload": "^2.6.2",
     "react-transition-group": "^4.2.1",
     "reactstrap": "^8.0.1",

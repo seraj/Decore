@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should render correctly 1`] = `
+.c0.decore-image-enter {
+  opacity: 0;
+}
+
+.c0.decore-image-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+.c0.decore-image-exit {
+  opacity: 1;
+}
+
+.c0.decore-image-exit {
+  opacity: 0;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+<img
+  className="c0"
+  onLoad={[Function]}
+>
+  Test
+</img>
+`;

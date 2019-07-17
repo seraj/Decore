@@ -25,7 +25,11 @@ const StyledButton = styled.button<ButtonProps>`
       ? theme.colors.secondary
       : theme.colors.primary
   };
-  color: ${disabled ? darken(0.3, theme.colors.disabled) : theme.colors.text};
+  color: ${
+    disabled
+      ? darken(0.3, theme.colors.disabled)
+      : theme.colors.text.onBackground
+  };
   border: 1.5px solid
     ${
       disabled
@@ -52,7 +56,7 @@ const StyledButton = styled.button<ButtonProps>`
       : `
     &:hover {
       text-decoration: none;
-      color: ${theme.colors.text};
+      color: ${theme.colors.text.onBackground};
       border: 1.5px solid
         ${darken(
           0.2,
@@ -64,7 +68,7 @@ const StyledButton = styled.button<ButtonProps>`
           secondary ? theme.colors.secondary : theme.colors.primary
         )};
       svg {
-        color: ${theme.colors.text};
+        color: ${theme.colors.text.onBackground};
       }
     }
     &:active {
@@ -80,7 +84,7 @@ const StyledButton = styled.button<ButtonProps>`
         )};
       box-shadow: none !important;
       svg {
-        color: ${theme.colors.text};
+        color: ${theme.colors.text.onBackground};
       }
     }
   `

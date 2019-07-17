@@ -3,7 +3,10 @@ interface Colors {
   primary: string;
   secondary: string;
   success: string;
-  text: string;
+  text: {
+    normal: string;
+    onBackground: string;
+  };
   white: string;
 }
 
@@ -11,9 +14,14 @@ interface Animations {
   duration: number;
 }
 
+interface Icons {
+  size: number;
+}
+
 export interface Theme {
   colors: Colors;
   animations: Animations;
+  icons: Icons;
 }
 
 const theme: Theme = {
@@ -23,10 +31,16 @@ const theme: Theme = {
     secondary: "#ff8686",
     success: "#3abf7c",
     white: "#ffffff",
-    text: "#ffffff"
+    text: {
+      normal: "#1f1f1f",
+      onBackground: "#ffffff"
+    }
   },
   animations: {
     duration: 250
+  },
+  icons: {
+    size: 12
   }
 };
 
