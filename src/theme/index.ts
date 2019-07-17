@@ -6,8 +6,14 @@ interface Colors {
   text: string;
   white: string;
 }
+
+interface Animations {
+  duration: number;
+}
+
 export interface Theme {
   colors: Colors;
+  animations: Animations;
 }
 
 const theme: Theme = {
@@ -18,6 +24,9 @@ const theme: Theme = {
     success: "#3abf7c",
     white: "#ffffff",
     text: "#ffffff"
+  },
+  animations: {
+    duration: 250
   }
 };
 
