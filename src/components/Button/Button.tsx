@@ -1,24 +1,7 @@
 import * as React from "react";
 import StyledButton from "./styled/StyledButton";
 import { withTheme } from "styled-components";
-
-export interface ButtonProps {
-  /** Callback function to be called when user clicks on button */
-  onClick?: () => void;
-  children: React.ReactNode;
-  /** Renders a disabled button and prevents onClick */
-  disabled?: boolean;
-  /** change the background of Button to our secondary Color */
-  secondary?: boolean;
-  /** change the button Radius */
-  radius?: number;
-  /** change font size of button */
-  big?: boolean;
-  /** Simple Button */
-  simple?: boolean;
-  /** additional class for button */
-  className?: string;
-}
+import ButtonProps from "./Button.props"
 
 const Button: React.FC<ButtonProps> = ({
   children,

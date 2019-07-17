@@ -1,17 +1,10 @@
 import { darken } from "polished";
 import styled from "../../../utils/styled-components";
+import ButtonProps from "../Button.props"
 
-const StyledButton = styled("button")<{
-disabled: boolean;
-secondary: boolean;
-radius: number;
-big: boolean;
-simple: boolean;
-}>`
-  ${({ disabled, secondary, radius, big, simple }) =>
-        simple
-            ? ``
-            : `
+const StyledButton = styled.button<ButtonProps>`
+  ${({ disabled, secondary, radius, big, theme }) =>
+  `
   display: flex;
   flex-direction: row;
   padding: 0.4rem 1.2rem;
@@ -23,44 +16,45 @@ simple: boolean;
   cursor: ${disabled ? `not-allowed` : `pointer`};
   transition: 0.3s;
   border-radius: ${`${radius}px` || "0"};
-  background: ${disabled ? "#bdc3c7" : secondary ? "#ff8686" : "#3abf7c"};
-  color: ${disabled ? darken(0.3, "#bdc3c7") : "#fff"};
+  background: ${disabled ? theme.colors.disabled : secondary ? theme.colors.secondary : theme.colors.primary};
+  color: ${disabled ? darken(0.3, theme.colors.disabled) : theme.colors.text};
   border: 1.5px solid
-    ${disabled ? "#bdc3c7" : secondary ? "#ff8686" : "#3abf7c"};
+    ${disabled ? theme.colors.disabled : secondary ? theme.colors.secondary : theme.colors.primary};
 
   svg {
     margin-right: 10px;
   }
-  &:hover {
-    text-decoration: none;
-    color: ${disabled ? darken(0.3, "#bdc3c7") : "#fff"};
-    border: 1.5px solid
-      ${disabled ? "#bdc3c7" : darken(0.2, secondary ? "#ff8686" : "#3abf7c")};
-    background-color: ${
-    disabled ? "#bdc3c7" : darken(0.2, secondary ? "#ff8686" : "#3abf7c")
-};
-    svg {
-      color: ${disabled ? "#bdc3c7" : "#fff"};
-    }
-  }
-  &:active {
-    border: 1.5px solid
-      ${darken(0.3, secondary ? "#ff8686" : "#3abf7c")};
-    background-color: ${
-    disabled ? "#bdc3c7" : darken(0.3, secondary ? "#ff8686" : "#3abf7c")
-};
-    box-shadow: none !important;
-    svg {
-      color: ${"#fff"};
-    }
-  }
+
   &.light {
     background: #f5f5f5;
     border-radius: 1px;
     color: #333;
     border: none;
   }
+
+  ${disabled ? `` : `
+    &:hover {
+      text-decoration: none;
+      color: ${theme.colors.text};
+      border: 1.5px solid
+        ${darken(0.2, secondary ? theme.colors.secondary : theme.colors.primary)};
+      background-color: 
+        ${darken(0.2, secondary ? theme.colors.secondary : theme.colors.primary)};
+      svg {
+        color: ${theme.colors.text};
+      }
+    }
+    &:active {
+      border: 1.5px solid
+        ${darken(0.3, secondary ? theme.colors.secondary : theme.colors.primary)};
+      background-color:
+        ${darken(0.3, secondary ? theme.colors.secondary : theme.colors.primary)};
+      box-shadow: none !important;
+      svg {
+        color: ${theme.colors.text};
+      }
+    }
   `}
-`;
+  `}`;
 
 export default StyledButton;

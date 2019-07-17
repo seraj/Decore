@@ -1,13 +1,10 @@
 import Modal from "reactstrap/lib/Modal";
 import ModalHeader from "reactstrap/lib/ModalHeader";
 import ModalBody from "reactstrap/lib/ModalBody";
+import ModalProps from "../Modal.props"
 
 import styled, { css } from "../../../utils/styled-components";
 
-const hoverStyle = css`
-  &:hover {
-  }
-`;
 const ModalContent = css`
   .modal-content {
     position: fixed;
@@ -33,17 +30,12 @@ const ModalContent = css`
     }
   }
 `;
-const StyledModal = styled(Modal)<{
-isOpen: boolean;
-toggle: () => void;
-}>`
+const StyledModal = styled(Modal)<ModalProps>`
   height: 100%;
-  ${hoverStyle}
   ${ModalContent}
 `;
-export const StyledModalHeader = styled(ModalHeader)<{
-toggle: () => void;
-}>`
+
+export const StyledModalHeader = styled(ModalHeader)<ModalProps>`
   border: none !important;
   text-align: center !important;
   display: block !important;
@@ -54,5 +46,6 @@ toggle: () => void;
     padding: 0 !important;
   }
 `;
+
 export const StyledModalBody = styled(ModalBody)``;
 export default StyledModal;

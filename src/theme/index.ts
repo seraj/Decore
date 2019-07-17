@@ -1,22 +1,24 @@
 interface Colors {
-    disabledColor: string;
-    primaryColor: string;
-    secondaryColor: string;
-    successColor: string;
-    white: string;
+  disabled: string;
+  primary: string;
+  secondary: string;
+  success: string;
+  text: string;
+  white: string;
 }
 export interface ThemeInterface {
-    colors: Colors;
+  colors: Colors;
 }
 
 const theme: ThemeInterface = {
-    colors: {
-        disabledColor: "#bdc3c7",
-        primaryColor: "#3abf7c",
-        secondaryColor: "#ff8686",
-        successColor: "#3abf7c",
-        white: "#ffffff"
-    }
+  colors: {
+    disabled: "#bdc3c7",
+    primary: "#3abf7c",
+    secondary: "#ff8686",
+    success: "#3abf7c",
+    white: "#ffffff",
+    text: "#ffffff"
+  }
 };
 
 export default theme;

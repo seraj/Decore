@@ -1,17 +1,8 @@
 import * as React from "react";
 import StyledModal from "./styled/StyledModal";
 import "../../assets/css/Modal.css";
-interface ModalProps {
-  /** callback for toggling isOpen in the controlling component */
-  toggle: () => void;
-  children: React.ReactNode;
-  /** boolean to Modal or not */
-  isOpen: boolean;
-  /** Modal Title */
-  title?: string;
-  /** additional class */
-  className?: string;
-}
+import ModalProps from "./Modal.props"
+
 
 const Modal: React.FC<ModalProps> = ({
   children,
