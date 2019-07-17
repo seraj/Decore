@@ -30,6 +30,45 @@ const ModalContent = css`
   }
 `;
 const StyledModal = styled(Modal)<ModalProps>`
+  .modal-backdrop {
+    opacity: 1 !important;
+    background: rgba(200, 200, 200, 0.5) !important;
+  }
+
+  @media (min-width: 576px) {
+    .modal-dialog {
+      margin: 0 auto !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.modal .modal-dialog {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &.modal .modal-content {
+      transform: none;
+      width: 100%;
+      border-radius: 0;
+      bottom: auto;
+      right: 0;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0) !important;
+    }
+  }
+
+  &.fade .modal-dialog {
+    -webkit-transform: translate(0, -2%) !important;
+    transform: translate(0, -2%) !important;
+  }
+
+  &.show .modal-dialog {
+    -webkit-transform: translate(0, 0%) !important;
+    transform: translate(0, 0%) !important;
+  }
+
   height: 100%;
   ${ModalContent}
 `;
