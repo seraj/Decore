@@ -5,7 +5,7 @@ const StyledInput = styled("input")<{
   radius: number;
   simple: boolean;
 }>`
-  ${({ disabled, radius, simple }) => 
+  ${({ radius, simple }) => 
     simple ?
       `` :
       `
@@ -15,12 +15,10 @@ const StyledInput = styled("input")<{
         height: 45px;
         border-radius: ${`${radius}px` || "0"};
 
-        ${disabled ?
-          `&[disabled] {
-            color: rgba(0, 0, 0, 0.25) !important;
-            cursor: not-allowed !important;
-            opacity: 0.5 !important;
-          }` : ``
+        &[disabled] {
+          color: rgba(0, 0, 0, 0.25) !important;
+          cursor: not-allowed !important;
+          opacity: 0.5 !important;
         }
       `
 }
