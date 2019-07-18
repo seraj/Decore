@@ -5,7 +5,7 @@ import Radio from "./Radio";
 
 describe("Radio", () => {
   it("should render correctly", () => {
-    const component = themed(<Radio>Test</Radio>).toJSON();
+    const component = themed(<Radio />).toJSON();
 
     expect(component).toMatchSnapshot();
   });

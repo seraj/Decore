@@ -1,4 +1,4 @@
-import { text, withKnobs } from "@storybook/addon-knobs";
+import { text, withKnobs, boolean } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 import wInfo from "../../utils/wInfo";
@@ -12,7 +12,7 @@ stories.add(
   wInfo()(() => (
     <>
       <div>
-        <Radio name="test" />
+        <Radio checked={boolean("checked", false)} name="test" />
       </div>
       <div>
         <Radio name="test" />

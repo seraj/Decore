@@ -1,11 +1,17 @@
 import * as React from "react";
-import StyledRadio from "./styled/StyledRadio";
+import StyledRadio, { HiddenRadio, RadioContainer } from "./styled/StyledRadio";
 import RadioProps from "./Radio.props";
 
-const Radio: React.FC<RadioProps> = ({ children, ...props }) => (
-  <StyledRadio {...props} type="radio">
-    {children}
-  </StyledRadio>
+const Radio: React.FC<RadioProps> = ({
+  className,
+  checked,
+  children,
+  ...props
+}) => (
+  <RadioContainer className={className}>
+    <HiddenRadio {...props} checked={checked} type="radio" />
+    <StyledRadio checked={checked} />
+  </RadioContainer>
 );
 
 export default Radio;
