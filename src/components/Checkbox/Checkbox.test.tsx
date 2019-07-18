@@ -5,7 +5,7 @@ import Checkbox from "./Checkbox";
 
 describe("Checkbox", () => {
   it("should render correctly", () => {
-    const component = themed(<Checkbox>Test</Checkbox>).toJSON();
+    const component = themed(<Checkbox />).toJSON();
 
     expect(component).toMatchSnapshot();
   });
