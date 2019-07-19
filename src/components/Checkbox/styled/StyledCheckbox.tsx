@@ -24,17 +24,30 @@ export const HiddenCheckbox = styled(Input).attrs({ type: "checkbox" })<
 `;
 
 export const StyledCheckbox = styled.div<CheckboxProps>`
-  ${({ checked }) => `
+  ${({ checked, theme }) => `
         display: inline-block;
         width: 20px;
         height: 20px;
-        background: #fff;
-        border-color: ${checked ? "#333" : "#999"};
+        background: ${theme.colors.light};
+        border-color: ${
+          checked ? theme.colors.mono[700] : theme.colors.mono[500]
+        };
         border-width: 1.5px;
         border-style: solid;
 
         &:hover {
-            border-color: #666;
+            border-color: ${theme.colors.mono[600]};
+        }
+
+        &[disabled] {
+            background: ${theme.colors.mono[300]};
+            border-color: ${theme.colors.mono[300]};
+
+            &:hover ${Icon} {
+              svg * {
+                fill: ${theme.colors.mono[500]};
+              }
+            }
         }
 
         ${HiddenCheckbox}:focus + & {

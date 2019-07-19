@@ -9,5 +9,10 @@ stories.addDecorator(withKnobs);
 
 stories.add(
   "default",
-  wInfo()(() => <Checkbox checked={boolean("checked", false)} />)
+  wInfo()(() => (
+    <Checkbox
+      checked={boolean("checked", false)}
+      disabled={boolean("disabled", false)}
+    />
+  ))
 );
