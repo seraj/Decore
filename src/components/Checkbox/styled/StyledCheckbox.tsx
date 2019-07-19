@@ -23,7 +23,7 @@ export const HiddenCheckbox = styled(Input).attrs({ type: "checkbox" })<
   width: 1px !important;
 `;
 
-export const StyledCheckbox = styled("div")<CheckboxProps>`
+export const StyledCheckbox = styled.div<CheckboxProps>`
   ${({ checked }) => `
         display: inline-block;
         width: 20px;

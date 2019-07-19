@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox should render correctly 1`] = `
-.c0 {
+.c3 {
   border: none;
   background-color: #eee;
   padding: 1.5rem 0.8rem;
@@ -9,16 +9,93 @@ exports[`Checkbox should render correctly 1`] = `
   border-radius: 0px;
 }
 
-.c0[disabled] {
+.c3[disabled] {
   color: rgba(0,0,0,0.25) !important;
   cursor: not-allowed !important;
   opacity: 0.5 !important;
 }
 
-<input
-  className="sc-bwzfXH c0"
-  type="checkbox"
+.c5 {
+  display: inline-block;
+  fill: #1f1f1f;
+  width: 12px;
+}
+
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c2 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clippath: inset(50%);
+  clippath: inset(50%);
+  height: 1px !important;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px !important;
+}
+
+.c4 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-color: #999;
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.c4:hover {
+  border-color: #666;
+}
+
+.c1:focus + .c4 {
+  box-shadow: 0 0 0 3px pink;
+}
+
+.c4 function (_a) {
+  -webkit-var: children = _a.children,props = __rest(_a,["children"]);
+  -moz-var: children = _a.children,props = __rest(_a,["children"]);
+  -ms-var: children = _a.children,props = __rest(_a,["children"]);
+  var: children = _a.children,props = __rest(_a,["children"]);
+  return: (React.createElement(StyledIcon_1.default,__assign({},props),children));
+}
+
+.c4 {
+  position: relative;
+}
+
+.c4 svg {
+  visibility: hidden;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+}
+
+<div
+  className="c0"
 >
-  Test
-</input>
+  <input
+    className="c1 c2 c3"
+    type="checkbox"
+  />
+  <div
+    className="c4"
+  >
+    <span
+      className="isvg loaded c5"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9.87216 0.936324L9.06101 0.058217C9.02874 0.0194056 8.97805 0 8.93196 0C8.88126 0 8.83517 0.0194056 8.80291 0.058217L3.18011 6.02062L1.13378 3.86659C1.09691 3.82777 1.05082 3.80837 1.00473 3.80837C0.958641 3.80837 0.912552 3.82777 0.875682 3.86659L0.0553062 4.73014C-0.0184354 4.80776 -0.0184354 4.92905 0.0553062 5.00667L2.63626 7.72347C2.80218 7.89812 3.00497 8 3.1755 8C3.41977 8 3.63178 7.81079 3.71013 7.73317C3.71013 7.73317 3.71013 7.73317 3.71474 7.73317L9.87677 1.21286C9.9413 1.13038 9.9413 1.0091 9.87216 0.936324Z' fill='#333333'/></svg>",
+        }
+      }
+    />
+  </div>
+</div>
 `;

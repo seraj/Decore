@@ -6,7 +6,7 @@
   "types": "build/lib/index.d.ts",
   "scripts": {
     "compile": "tsc",
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "copycss": "copyfiles -u 1 src/assets/css/*.css build/lib",
     "build": "npm run compile && npm run copycss",
     "lint": "eslint src --ext .ts,.tsx --fix",

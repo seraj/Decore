@@ -16,7 +16,7 @@ exports[`Radio should render correctly 1`] = `
 }
 
 <input
-  className="sc-bwzfXH c0"
+  className="c0"
   type="radio"
 >
   Test
