@@ -45,6 +45,11 @@ interface Colors {
 
 interface Animations {
   duration: number;
+
+  slider: {
+    speed: number;
+    autoplaySpeed: number;
+  };
 }
 
 interface Icons {
@@ -113,7 +118,11 @@ const theme: Theme = {
   },
 
   animations: {
-    duration: 250
+    duration: 250,
+    slider: {
+      speed: 1000,
+      autoplaySpeed: 5000
+    }
   },
 
   icons: {

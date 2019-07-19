@@ -22,11 +22,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
+        include: path.resolve(__dirname, "..")
+      },
+      {
+        test: /\.(ttf|svg|woff|eot|gif|png)$/,
+        use: ["url-loader"]
       }
     ]
   },
   resolve: {
-    extensions: [".ts", ".tsx"]
+    extensions: [".ts", ".tsx", ".css"]
   }
 };
