@@ -18,6 +18,7 @@ exports[`Checkbox should render correctly 1`] = `
   background: #E5E5E5;
   color: #999999;
   cursor: not-allowed !important;
+  pointer-events: none;
 }
 
 .c5 {
@@ -63,14 +64,7 @@ exports[`Checkbox should render correctly 1`] = `
 .c4[disabled] {
   background: #E5E5E5;
   border-color: #E5E5E5;
-}
-
-.c4[disabled]:hover function (_a) {
-  -webkit-var: children = _a.children,props = __rest(_a,["children"]);
-  -moz-var: children = _a.children,props = __rest(_a,["children"]);
-  -ms-var: children = _a.children,props = __rest(_a,["children"]);
-  var: children = _a.children,props = __rest(_a,["children"]);
-  return: (React.createElement(StyledIcon_1.default,__assign({},props),children));
+  pointer-events: none;
 }
 
 .c4[disabled] svg * {

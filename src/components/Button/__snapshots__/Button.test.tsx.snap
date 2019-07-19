@@ -43,6 +43,7 @@ exports[`Button should render correctly 1`] = `
   background: #E5E5E5;
   color: theme.colors.mono[500];
   cursor: not-allowed;
+  pointer-events: none;
 }
 
 .c0.light {
@@ -52,23 +53,23 @@ exports[`Button should render correctly 1`] = `
   border: none;
 }
 
-.c0:not(:disabled):hover {
+.c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #ffffff;
   background-color: #5FDD9D;
 }
 
-.c0:not(:disabled):hover .c1 svg {
+.c0:hover .c1 svg {
   fill: #ffffff;
 }
 
-.c0:not(:disabled):active {
+.c0:active {
   background-color: #1B8B5C;
   box-shadow: none !important;
 }
 
-.c0:not(:disabled):active .c1 svg {
+.c0:active .c1 svg {
   fill: #ffffff;
 }
 

@@ -42,11 +42,10 @@ export const StyledCheckbox = styled.div<CheckboxProps>`
         &[disabled] {
             background: ${theme.colors.mono[300]};
             border-color: ${theme.colors.mono[300]};
+            pointer-events: none;
 
-            &:hover ${Icon} {
-              svg * {
-                fill: ${theme.colors.mono[500]};
-              }
+            svg * {
+              fill: ${theme.colors.mono[500]};
             }
         }
 

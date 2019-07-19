@@ -28,14 +28,8 @@ const StyledRadio = styled.span<RadioProps>`
         border-style: solid;
         border-color: ${theme.colors.mono[500]};
 
-        ${
-          !disabled
-            ? `
-          &:hover {
-              border-color: ${theme.colors.mono[600]};
-          }
-        `
-            : ""
+        &:hover {
+            border-color: ${theme.colors.mono[600]};
         }
 
         ${
@@ -67,6 +61,8 @@ const StyledRadio = styled.span<RadioProps>`
           disabled
             ? `
             background: ${theme.colors.mono[300]};
+            pointer-events: none;
+            cursor: not-allowed;
 
             &::after {
                 content: '';

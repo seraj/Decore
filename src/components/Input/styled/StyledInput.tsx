@@ -34,6 +34,7 @@ const StyledInput = styled.input<InputProps>`
         background: ${theme.colors.mono[300]};
         color: ${theme.colors.mono[500]};
         cursor: not-allowed !important;
+        pointer-events: none;
       }
   `;
   }}

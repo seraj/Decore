@@ -11,6 +11,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
   checked,
   disabled,
   className,
+  children,
   ...props
 }) => (
   <CheckboxContainer className={className}>

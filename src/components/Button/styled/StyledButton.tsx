@@ -41,6 +41,7 @@ const StyledButton = styled.button<ButtonProps>`
     background: ${theme.colors.mono[300]}
     color: theme.colors.mono[500];
     cursor: not-allowed;
+    pointer-events: none;
   }
 
   &.light {
@@ -50,7 +51,7 @@ const StyledButton = styled.button<ButtonProps>`
     border: none;
   }
 
-  &:not(:disabled):hover {
+  &:hover {
     text-decoration: none;
     color: ${textColor};
     background-color: ${color.hover};
@@ -59,7 +60,7 @@ const StyledButton = styled.button<ButtonProps>`
     }
   }
 
-  &:not(:disabled):active {
+  &:active {
     background-color: ${color.active};
     box-shadow: none !important;
     ${Icon} svg {

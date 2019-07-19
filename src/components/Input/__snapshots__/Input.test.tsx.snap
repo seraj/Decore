@@ -18,6 +18,7 @@ exports[`Input should render correctly 1`] = `
   background: #E5E5E5;
   color: #999999;
   cursor: not-allowed !important;
+  pointer-events: none;
 }
 
 <input
