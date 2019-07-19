@@ -1,11 +1,27 @@
 interface Colors {
   disabled: string;
-  primary: string;
-  secondary: string;
+
+  primary: {
+    normal: string;
+    hover: string;
+    active: string;
+
+    light: string;
+  };
+
+  secondary: {
+    normal: string;
+    hover: string;
+    active: string;
+
+    light: string;
+  };
+
   success: string;
-  danger: string;
+  error: string;
   warning: string;
   info: string;
+
   mono: {
     700: string;
     600: string;
@@ -22,6 +38,7 @@ interface Colors {
 
     link: string;
   };
+
   light: string;
   dark: string;
 }
@@ -34,20 +51,37 @@ interface Icons {
   size: number;
 }
 
+interface Borders {
+  radius: number;
+}
+
 export interface Theme {
   colors: Colors;
   animations: Animations;
   icons: Icons;
+  borders: Borders;
 }
 
 const theme: Theme = {
   colors: {
-    disabled: "#bdc3c7",
+    disabled: "#E5E5E5",
 
-    primary: "#3abf7c",
-    secondary: "#ff8686",
+    primary: {
+      normal: "#3abf7c",
+      hover: "#5FDD9D",
+      active: "#1B8B5C",
 
-    danger: "#DB504A",
+      light: "rgba(58, 191, 124, 0.08)"
+    },
+    secondary: {
+      normal: "#ff8686",
+      hover: "#ffc2c2",
+      active: "#c20000",
+
+      light: "rgba(255, 133, 133, 0.08)"
+    },
+
+    error: "#DB504A",
     warning: "#FF8552",
     info: "#4D9DE0",
     success: "#3abf7c",
@@ -74,9 +108,14 @@ const theme: Theme = {
     }
   },
 
+  borders: {
+    radius: 0
+  },
+
   animations: {
     duration: 250
   },
+
   icons: {
     size: 12
   }

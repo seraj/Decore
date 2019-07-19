@@ -3,7 +3,7 @@
 exports[`Icon should render correctly 1`] = `
 .c0 {
   display: inline-block;
-  fill: #1f1f1f;
+  fill: #333333;
   width: 12px;
 }
 

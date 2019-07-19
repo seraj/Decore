@@ -2,10 +2,16 @@ import { darken } from "polished";
 import styled from "styled-components";
 import ButtonProps from "../Button.props";
 import { Size } from "../../../theme/Theme.props";
+import Icon from "../../Icon/styled/StyledIcon";
 
 const StyledButton = styled.button<ButtonProps>`
-  ${({ disabled, secondary, radius, dSize, theme }) =>
-    `
+  ${({ disabled, secondary, outline, dSize, theme }) => {
+    const color = secondary ? theme.colors.secondary : theme.colors.primary;
+    const textColor = outline ? color.normal : theme.colors.text.light;
+    const borderColor = outline ? color.normal : "transparent";
+    const backgroundColor = outline ? color.light : color.normal;
+
+    return `
   display: flex;
   flex-direction: row;
   padding: 0.4rem 1.2rem;
@@ -14,33 +20,27 @@ const StyledButton = styled.button<ButtonProps>`
   font-weight: bold;
   font-size: ${dSize == Size.big ? `20px` : `14px`};
   text-align: center;
-  cursor: ${disabled ? `not-allowed` : `pointer`};
+  cursor: pointer;
   transition: 0.3s;
-  border-radius: ${radius || 0}px;
+  border-radius: ${theme.borders.radius}px;
+  border: 1.5px solid ${borderColor};
 
-  background: ${
-    disabled
-      ? theme.colors.disabled
-      : secondary
-      ? theme.colors.secondary
-      : theme.colors.primary
-  };
-  color: ${
-    disabled
-      ? darken(0.3, theme.colors.disabled)
-      : theme.colors.text.onBackground
-  };
-  border: 1.5px solid
-    ${
-      disabled
-        ? theme.colors.disabled
-        : secondary
-        ? theme.colors.secondary
-        : theme.colors.primary
-    };
+  background: ${backgroundColor};
+  color: ${textColor};
 
-  svg {
-    margin-right: 10px;
+  ${Icon} {
+    margin-right: 0.5em;
+
+    svg {
+      width: 0.8em;
+      fill: ${textColor};
+    }
+  }
+
+  &:disabled {
+    background: ${theme.colors.mono[300]}
+    color: theme.colors.mono[500];
+    cursor: not-allowed;
   }
 
   &.light {
@@ -50,46 +50,24 @@ const StyledButton = styled.button<ButtonProps>`
     border: none;
   }
 
-  ${
-    disabled
-      ? ``
-      : `
-    &:hover {
-      text-decoration: none;
-      color: ${theme.colors.text.onBackground};
-      border: 1.5px solid
-        ${darken(
-          0.2,
-          secondary ? theme.colors.secondary : theme.colors.primary
-        )};
-      background-color: 
-        ${darken(
-          0.2,
-          secondary ? theme.colors.secondary : theme.colors.primary
-        )};
-      svg {
-        color: ${theme.colors.text.onBackground};
-      }
+  &:not(:disabled):hover {
+    text-decoration: none;
+    color: ${textColor};
+    background-color: ${color.hover};
+    ${Icon} svg {
+      fill: ${textColor};
     }
-    &:active {
-      border: 1.5px solid
-        ${darken(
-          0.3,
-          secondary ? theme.colors.secondary : theme.colors.primary
-        )};
-      background-color:
-        ${darken(
-          0.3,
-          secondary ? theme.colors.secondary : theme.colors.primary
-        )};
-      box-shadow: none !important;
-      svg {
-        color: ${theme.colors.text.onBackground};
-      }
-    }
-  `
   }
-  `}
+
+  &:not(:disabled):active {
+    background-color: ${color.active};
+    box-shadow: none !important;
+    ${Icon} svg {
+      fill: ${textColor};
+    }
+  }
+`;
+  }}
 `;
 
 export default StyledButton;

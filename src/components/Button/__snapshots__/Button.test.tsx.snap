@@ -25,13 +25,24 @@ exports[`Button should render correctly 1`] = `
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-radius: 0px;
+  border: 1.5px solid transparent;
   background: #3abf7c;
   color: #ffffff;
-  border: 1.5px solid #3abf7c;
 }
 
-.c0 svg {
-  margin-right: 10px;
+.c0 .c1 {
+  margin-right: 0.5em;
+}
+
+.c0 .c1 svg {
+  width: 0.8em;
+  fill: #ffffff;
+}
+
+.c0:disabled {
+  background: #E5E5E5;
+  color: theme.colors.mono[500];
+  cursor: not-allowed;
 }
 
 .c0.light {
@@ -41,26 +52,24 @@ exports[`Button should render correctly 1`] = `
   border: none;
 }
 
-.c0:hover {
+.c0:not(:disabled):hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #ffffff;
-  border: 1.5px solid #227149;
-  background-color: #227149;
+  background-color: #5FDD9D;
 }
 
-.c0:hover svg {
-  color: #ffffff;
+.c0:not(:disabled):hover .c1 svg {
+  fill: #ffffff;
 }
 
-.c0:active {
-  border: 1.5px solid #164a30;
-  background-color: #164a30;
+.c0:not(:disabled):active {
+  background-color: #1B8B5C;
   box-shadow: none !important;
 }
 
-.c0:active svg {
-  color: #ffffff;
+.c0:not(:disabled):active .c1 svg {
+  fill: #ffffff;
 }
 
 <button

@@ -2,22 +2,27 @@
 
 exports[`Checkbox should render correctly 1`] = `
 .c3 {
-  border: none;
-  background-color: #eee;
-  padding: 1.5rem 0.8rem;
+  border: 1.5px solid #999999;
+  background-color: undefined;
+  padding: 1rem 0.8rem;
   height: 45px;
   border-radius: 0px;
+  color: #333333;
 }
 
-.c3[disabled] {
-  color: rgba(0,0,0,0.25) !important;
+.c3:hover {
+  border-color: #333333;
+}
+
+.c3:disabled {
+  background: #E5E5E5;
+  color: #999999;
   cursor: not-allowed !important;
-  opacity: 0.5 !important;
 }
 
 .c5 {
   display: inline-block;
-  fill: #1f1f1f;
+  fill: #333333;
   width: 12px;
 }
 
@@ -45,14 +50,31 @@ exports[`Checkbox should render correctly 1`] = `
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: #fff;
-  border-color: #999;
+  background: #ffffff;
+  border-color: #999999;
   border-width: 1.5px;
   border-style: solid;
 }
 
 .c4:hover {
-  border-color: #666;
+  border-color: #666666;
+}
+
+.c4[disabled] {
+  background: #E5E5E5;
+  border-color: #E5E5E5;
+}
+
+.c4[disabled]:hover function (_a) {
+  -webkit-var: children = _a.children,props = __rest(_a,["children"]);
+  -moz-var: children = _a.children,props = __rest(_a,["children"]);
+  -ms-var: children = _a.children,props = __rest(_a,["children"]);
+  var: children = _a.children,props = __rest(_a,["children"]);
+  return: (React.createElement(StyledIcon_1.default,__assign({},props),children));
+}
+
+.c4[disabled] svg * {
+  fill: #999999;
 }
 
 .c1:focus + .c4 {

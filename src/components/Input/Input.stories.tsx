@@ -15,7 +15,9 @@ stories.add(
       type={text("type", "text")}
       defaultValue={text("defaultValue", "")}
       disabled={boolean("disabled", false)}
-      radius={number("border-radius", 0)}
+      dark={boolean("dark", false)}
+      success={boolean("success", false)}
+      error={boolean("error", false)}
     />
   ))
 );

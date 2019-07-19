@@ -10,9 +10,11 @@ export default interface ThemeProps {
   /** change the background of Button to our secondary Color */
   secondary?: boolean;
 
-  radius?: number;
-
   dSize?: Size;
 
   light?: boolean;
+  dark?: boolean;
+
+  success?: boolean;
+  error?: boolean;
 }

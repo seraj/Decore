@@ -2,17 +2,22 @@
 
 exports[`Radio should render correctly 1`] = `
 .c0 {
-  border: none;
-  background-color: #eee;
-  padding: 1.5rem 0.8rem;
+  border: 1.5px solid #999999;
+  background-color: undefined;
+  padding: 1rem 0.8rem;
   height: 45px;
   border-radius: 0px;
+  color: #333333;
 }
 
-.c0[disabled] {
-  color: rgba(0,0,0,0.25) !important;
+.c0:hover {
+  border-color: #333333;
+}
+
+.c0:disabled {
+  background: #E5E5E5;
+  color: #999999;
   cursor: not-allowed !important;
-  opacity: 0.5 !important;
 }
 
 <input
