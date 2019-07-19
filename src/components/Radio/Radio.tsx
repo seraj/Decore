@@ -6,11 +6,17 @@ const Radio: React.FC<RadioProps> = ({
   className,
   checked,
   children,
+  disabled,
   ...props
 }) => (
   <RadioContainer className={className}>
-    <HiddenRadio {...props} checked={checked} type="radio" />
-    <StyledRadio checked={checked} />
+    <HiddenRadio
+      {...props}
+      checked={checked}
+      disabled={disabled}
+      type="radio"
+    />
+    <StyledRadio checked={checked} disabled={disabled} />
   </RadioContainer>
 );
 

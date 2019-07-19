@@ -15,32 +15,72 @@ export const HiddenRadio = styled(Input).attrs({ type: "radio" })<RadioProps>`
   cursor: pointer;
 `;
 
-const StyledRadio = styled("span")<RadioProps>`
-  ${({ checked }) => `
+const StyledRadio = styled.span<RadioProps>`
+  ${({ theme, checked, disabled }) => `
         position: absolute;
         top: 0;
         left: 0;
         height: 20px;
         width: 20px;
-        background-color: #fff;
+        background-color: ${theme.colors.light};
         border-radius: 0;
         border-width: 1.5px;
         border-style: solid;
-        border-color: ${checked ? "#333" : "#999"};
+        border-color: ${theme.colors.mono[500]};
 
-        &:hover {
-            border-color: #666;
+        ${
+          !disabled
+            ? `
+          &:hover {
+              border-color: ${theme.colors.mono[600]};
+          }
+        `
+            : ""
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            display: ${checked ? "block" : "none"};
-            top: 4.5px;
-            left: 4.5px;
-            width: 8px;
-            height: 8px;
-            background-color: #333;
+        ${
+          !disabled && checked
+            ? `
+            border-color: ${theme.colors.mono[700]};
+        `
+            : ""
+        }
+
+        ${
+          checked
+            ? `
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 4.5px;
+                left: 4.5px;
+                width: 8px;
+                height: 8px;
+                background-color: ${theme.colors.mono[700]};
+            }
+        `
+            : ""
+        }
+
+        ${
+          disabled
+            ? `
+            background: ${theme.colors.mono[300]};
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 8px;
+                left: 4.5px;
+                width: 8px;
+                height: 2px;
+                background-color: ${theme.colors.mono[500]};
+            }
+          `
+            : ""
+        }
         }
     `}
 `;

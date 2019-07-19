@@ -12,7 +12,11 @@ stories.add(
   wInfo()(() => (
     <>
       <div>
-        <Radio checked={boolean("checked", false)} name="test" />
+        <Radio
+          checked={boolean("checked", false)}
+          disabled={boolean("disabled", false)}
+          name="test"
+        />
       </div>
       <div>
         <Radio name="test" />
