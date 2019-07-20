@@ -9,7 +9,7 @@ import ToastProps from "./Toast.props";
 
 const Toast: React.FC<ToastProps> = ({
   closeToast,
-  icon,
+  icon = "",
   type,
   text,
   ...props
