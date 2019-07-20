@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter should render correctly 1`] = `
+.c2 {
+  border: 1.5px solid #999999;
+  background-color: undefined;
+  padding: 1rem 0.8rem;
+  height: 45px;
+  border-radius: 0px;
+  color: #333333;
+}
+
+.c2:hover {
+  border-color: #333333;
+}
+
+.c2:disabled {
+  background: #E5E5E5;
+  color: #999999;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.c0 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  -webkit-clippath: inset(50%);
+  clippath: inset(50%);
+  height: 1px !important;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px !important;
+}
+
+.c3 {
+  display: inline-block;
+  width: 78px;
+  height: 29px;
+  background: #ffffff;
+  border-color: #999999;
+  border-width: 1.5px;
+  border-style: solid;
+  position: relative;
+}
+
+.c3:hover {
+  border-color: #333333;
+}
+
+.c3 .decore__value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 29px;
+  color: #999999;
+  text-align: center;
+  display: block;
+  font-size: 0.8em;
+}
+
+.c3 .decore__minus,
+.c3 .decore__plus {
+  position: absolute;
+  width: 25px;
+  text-align: center;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333333;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.c3 .decore__minus {
+  left: 0;
+  line-height: 26px;
+}
+
+.c3 .decore__minus:hover {
+  background: #E5E5E5;
+}
+
+.c3 .decore__plus {
+  right: 0;
+  line-height: 26px;
+}
+
+.c3 .decore__plus:hover {
+  background: #E5E5E5;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1 c2"
+    type="number"
+    value={0}
+  />
+  <div
+    className="c3"
+    value={0}
+  >
+    <span
+      className="decore__minus"
+      onClick={[Function]}
+    >
+      -
+    </span>
+    <span
+      className="decore__value"
+    >
+      0
+    </span>
+    <span
+      className="decore__plus"
+      onClick={[Function]}
+    >
+      +
+    </span>
+  </div>
+</div>
+`;

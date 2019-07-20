@@ -5,7 +5,7 @@ import { HiddenCheckbox } from "../../Checkbox/styled/StyledCheckbox";
 const StyledToggle = styled.div<ToggleProps>`
   ${({ theme, checked, disabled }) => `
       display: inline-block;
-      width: 58px;
+      width: 57px;
       height: 29px;
       background: ${theme.colors.light};
       border-color: ${
