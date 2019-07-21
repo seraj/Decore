@@ -18,6 +18,7 @@ stories.add(
       dark={boolean("dark", false)}
       success={boolean("success", false)}
       error={boolean("error", false)}
+      fluid={boolean("fluid", false)}
     />
   ))
 );

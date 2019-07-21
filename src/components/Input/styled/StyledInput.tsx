@@ -2,7 +2,7 @@ import styled from "styled-components";
 import InputProps from "../Input.props";
 
 const StyledInput = styled.input<InputProps>`
-  ${({ dark, success, error, theme }) => {
+  ${({ dark, success, fluid, error, theme }) => {
     const backgroundColor = dark ? theme.colors.mono[200] : theme.colors.white;
 
     let textColor = theme.colors.text.dark;
@@ -25,7 +25,13 @@ const StyledInput = styled.input<InputProps>`
       height: 45px;
       border-radius: ${theme.borders.radius}px;
       color: ${textColor};
-
+ ${
+   fluid
+     ? `
+      display: block;
+      width: 100%;`
+     : ``
+ }
       &:hover {
         border-color: ${borderColorHover};
       }
