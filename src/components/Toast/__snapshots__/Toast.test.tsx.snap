@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast should render correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 550px;
+  padding: 0.5em 1em;
+  background: #ffffff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+  border-left: 4px solid #3abf7c;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  justify-self: flex-end;
+  position: relative;
+  margin: 5px 0;
+  top: 5px;
+}
+
+.c5 h3 {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.c5 p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: right;
+  -webkit-justify-content: right;
+  -ms-flex-pack: right;
+  justify-content: right;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 .c2 span {
+  width: auto;
+}
+
+.c4 {
+  display: inline-block;
+  fill: #333333;
+  width: 12px;
+}
+
+<div
+  className="c0"
+  type="success"
+>
+  <div
+    className="c1"
+    type="success"
+  >
+    <div
+      className="c2 c3"
+    >
+      <span
+        className="isvg loaded c4"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='25' cy='25' r='25' fill='#3ABF7C'/><path d='M37.8732 18.6238L35.9116 16.5383C35.8336 16.4461 35.711 16.4 35.5995 16.4C35.477 16.4 35.3655 16.4461 35.2875 16.5383L21.6902 30.699L16.7417 25.5831C16.6526 25.491 16.5411 25.4449 16.4297 25.4449C16.3182 25.4449 16.2068 25.491 16.1176 25.5831L14.1337 27.6341C13.9554 27.8184 13.9554 28.1065 14.1337 28.2908L20.3751 34.7432C20.7763 35.158 21.2667 35.4 21.6791 35.4C22.2698 35.4 22.7825 34.9506 22.9719 34.7663C22.9719 34.7663 22.9719 34.7663 22.9831 34.7663L37.8843 19.2805C38.0404 19.0847 38.0404 18.7966 37.8732 18.6238Z' fill='white'/></svg>
+",
+          }
+        }
+      />
+    </div>
+    <div
+      className="c5"
+    >
+      <h3>
+        success
+      </h3>
+      <p>
+        Profile Updated.
+      </p>
+    </div>
+  </div>
+  <span
+    className="isvg loaded c4"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16 1.61714L14.3829 0L8 6.38286L1.61714 0L0 1.61714L6.38286 8L0 14.3829L1.61714 16L8 9.61714L14.3829 16L16 14.3829L9.61714 8L16 1.61714Z' fill='#999999'/></svg>
+",
+      }
+    }
+    style={
+      Object {
+        "cursor": "pointer",
+      }
+    }
+  />
+</div>
+`;

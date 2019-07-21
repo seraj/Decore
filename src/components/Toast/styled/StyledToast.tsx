@@ -3,7 +3,10 @@ import ToastProps from "../Toast.props";
 import Icon from "../../Icon";
 
 export const ToastContainer = styled.div<ToastProps>`
-  ${({ theme, type }) => `
+  ${({ theme, type }) => {
+    const toastType = type || "info";
+
+    return `
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,8 +15,9 @@ export const ToastContainer = styled.div<ToastProps>`
     padding: 0.5em 1em;
     background: ${theme.colors.light};
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid ${theme.colors[type]};
-  `}
+    border-left: 4px solid ${theme.colors[toastType]};
+  `;
+  }}
 `;
 
 export const ToastContent = styled.div`
@@ -27,10 +31,12 @@ export const ToastContent = styled.div`
 
   h3 {
     font-weight: 600;
+    font-size: 18px;
     text-transform: capitalize;
   }
   p {
     font-weight: 500;
+    font-size: 16px;
   }
 `;
 
