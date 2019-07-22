@@ -7,3 +7,4 @@ export { default as Modal } from "./components/Modal";
 export { default as ModalBody } from "./components/Modal/ModalBody";
 export { default as ModalHeader } from "./components/Modal/ModalHeader";
 export { default as InputSlider } from "./components/InputSlider";
+export { default as Table } from "./components/Table";
