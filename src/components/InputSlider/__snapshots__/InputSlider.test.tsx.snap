@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputSlider should render correctly 1`] = `
+.c0 .input-range__slider,
+.c0 .input-range__track--active {
+  background: #333333;
+  border-color: #333333;
+}
+
+<div
+  className="c0"
+/>
+`;
