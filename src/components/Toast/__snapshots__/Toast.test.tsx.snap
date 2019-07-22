@@ -24,7 +24,7 @@ exports[`Toast should render correctly 1`] = `
   border-left: 4px solid #3abf7c;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,15 +41,13 @@ exports[`Toast should render correctly 1`] = `
   top: 5px;
 }
 
-.c5 h3 {
+.c6 h5 {
   font-weight: 600;
-  font-size: 18px;
   text-transform: capitalize;
 }
 
-.c5 p {
-  font-weight: 500;
-  font-size: 16px;
+.c6 p {
+  font-weight: 400;
 }
 
 .c3 {
@@ -86,6 +84,14 @@ exports[`Toast should render correctly 1`] = `
   align-items: center;
 }
 
+.c1 .c5 h5 {
+  font-size: 1.25rem;
+}
+
+.c1 .c5 p {
+  font-size: undefined;
+}
+
 .c1 .c2 span {
   width: auto;
 }
@@ -118,11 +124,11 @@ exports[`Toast should render correctly 1`] = `
       />
     </div>
     <div
-      className="c5"
+      className="c5 c6"
     >
-      <h3>
+      <h5>
         success
-      </h3>
+      </h5>
       <p>
         Profile Updated.
       </p>

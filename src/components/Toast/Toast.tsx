@@ -20,7 +20,7 @@ const Toast: React.FC<ToastProps> = ({
         <Icon src={icon} />
       </ToastIconContainer>
       <ToastContent>
-        <h3>{type}</h3>
+        <h5>{type}</h5>
         <p>{text}</p>
       </ToastContent>
     </StyledToast>

@@ -29,14 +29,12 @@ export const ToastContent = styled.div`
   margin: 5px 0;
   top: 5px;
 
-  h3 {
+  h5 {
     font-weight: 600;
-    font-size: 18px;
     text-transform: capitalize;
   }
   p {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
   }
 `;
 
@@ -53,6 +51,15 @@ const StyledToast = styled.div<ToastProps>`
     flex-direction: row;
     justify-content: right;
     align-items: center;
+
+    ${ToastContent} {
+      h5 {
+        font-size: ${theme.fonts.heading.h5};
+      }
+      p {
+        font-size: ${theme.fonts.heading.text};
+      }
+    }
 
     ${ToastIconContainer} {
       span {

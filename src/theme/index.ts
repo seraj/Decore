@@ -60,11 +60,24 @@ interface Borders {
   radius: number;
 }
 
+interface Fonts {
+  heading: {
+    h1: string;
+    h2: string;
+    h3: string;
+    h4: string;
+    h5: string;
+    h6: string;
+  };
+  text: string;
+}
+
 export interface Theme {
   colors: Colors;
   animations: Animations;
   icons: Icons;
   borders: Borders;
+  fonts: Fonts;
 }
 
 const theme: Theme = {
@@ -127,6 +140,18 @@ const theme: Theme = {
 
   icons: {
     size: 12
+  },
+
+  fonts: {
+    heading: {
+      h1: "2.5rem",
+      h2: "2rem",
+      h3: "1.75rem",
+      h4: "1.5rem",
+      h5: "1.25rem",
+      h6: "1rem"
+    },
+    text: "1rem"
   }
 };
 
