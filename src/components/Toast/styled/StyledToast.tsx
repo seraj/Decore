@@ -12,7 +12,8 @@ export const ToastContainer = styled.div<ToastProps>`
     justify-content: space-between;
     align-items: center;
     width: 550px;
-    padding: 0.5em 1em;
+    height: 87px;
+    padding: 0 1em;
     background: ${theme.colors.light};
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
     border-left: 4px solid ${theme.colors[toastType]};
@@ -57,7 +58,8 @@ const StyledToast = styled.div<ToastProps>`
         font-size: ${theme.fonts.heading.h5};
       }
       p {
-        font-size: ${theme.fonts.heading.text};
+        font-size: ${theme.fonts.text};
+        color: ${theme.colors.text.normal};
       }
     }
 

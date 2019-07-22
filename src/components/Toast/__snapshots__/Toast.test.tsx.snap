@@ -18,7 +18,8 @@ exports[`Toast should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 550px;
-  padding: 0.5em 1em;
+  height: 87px;
+  padding: 0 1em;
   background: #ffffff;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
   border-left: 4px solid #3abf7c;
@@ -89,7 +90,8 @@ exports[`Toast should render correctly 1`] = `
 }
 
 .c1 .c5 p {
-  font-size: undefined;
+  font-size: 1rem;
+  color: #999999;
 }
 
 .c1 .c2 span {
