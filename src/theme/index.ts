@@ -72,12 +72,19 @@ interface Fonts {
   text: string;
 }
 
+interface Paddings {
+  table: {
+    normal: string;
+    compact: string;
+  };
+}
 export interface Theme {
   colors: Colors;
   animations: Animations;
   icons: Icons;
   borders: Borders;
   fonts: Fonts;
+  padding: Paddings;
 }
 
 const theme: Theme = {
@@ -88,7 +95,6 @@ const theme: Theme = {
       normal: "#3abf7c",
       hover: "#5FDD9D",
       active: "#1B8B5C",
-
       light: "rgba(58, 191, 124, 0.08)"
     },
     secondary: {
@@ -121,13 +127,17 @@ const theme: Theme = {
       dark: "#333333",
       normal: "#999999",
       light: "#ffffff",
-
       link: "#4D9DE0"
     }
   },
-
   borders: {
     radius: 0
+  },
+  padding: {
+    table: {
+      normal: "7px 5px",
+      compact: "20px 5px"
+    }
   },
 
   animations: {

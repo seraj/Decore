@@ -4,14 +4,16 @@ import TableProps from "../Table.props";
 
 const StyledTable = styled(ReactTable)<TableProps>`
   ${({ compact, simple, theme }) => {
-    const Padding = compact ? "7px 5px" : "20px 5px";
+    const Padding = compact
+      ? theme.padding.table.normal
+      : theme.padding.table.compact;
     const backgroundColor = simple ? "" : theme.colors.mono[200];
 
     return `
   border: none !important;
   .rt-thead.-header {
     box-shadow: none !important;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid ${theme.colors.mono[400]};
   }
   .rt-td {
     padding:${Padding} !important;
@@ -20,12 +22,12 @@ const StyledTable = styled(ReactTable)<TableProps>`
     .rt-th,
     .rt-td {
       border-right: none !important;
-      color: #999999;
+      color: ${theme.colors.mono[500]};
     }
   }
   .rt-tbody {
     .rt-tr-group {
-      border-bottom-color: #c4c4c4 !important;
+      border-bottom-color: ${theme.colors.mono[400]} !important;
       &:nth-child(odd) {
         background-color:${backgroundColor}
       }
