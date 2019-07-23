@@ -77,6 +77,10 @@ interface Paddings {
     normal: string;
     compact: string;
   };
+  dropdown: {
+    container: string;
+    links: string;
+  };
 }
 export interface Theme {
   colors: Colors;
@@ -137,6 +141,10 @@ const theme: Theme = {
     table: {
       normal: "7px 5px",
       compact: "20px 5px"
+    },
+    dropdown: {
+      container: "5px 0",
+      links: "5px 20px"
     }
   },
 

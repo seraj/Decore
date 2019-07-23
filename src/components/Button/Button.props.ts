@@ -5,4 +5,5 @@ export default interface ButtonProps
   extends ThemeProps,
     React.ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
+  radius?: number;
 }

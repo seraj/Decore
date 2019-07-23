@@ -1,15 +1,15 @@
-import { darken } from "polished";
 import styled from "styled-components";
 import ButtonProps from "../Button.props";
 import { Size } from "../../../theme/Theme.props";
 import Icon from "../../Icon/styled/StyledIcon";
 
 const StyledButton = styled.button<ButtonProps>`
-  ${({ disabled, secondary, outline, dSize, theme }) => {
+  ${({ disabled, radius, secondary, outline, dSize, theme }) => {
     const color = secondary ? theme.colors.secondary : theme.colors.primary;
     const textColor = outline ? color.normal : theme.colors.text.light;
     const borderColor = outline ? color.normal : "transparent";
     const backgroundColor = outline ? color.light : color.normal;
+    const BorderRadius = radius ? radius : theme.borders.radius;
 
     return `
   display: flex;
@@ -22,7 +22,7 @@ const StyledButton = styled.button<ButtonProps>`
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: ${theme.borders.radius}px;
+  border-radius: ${BorderRadius}px;
   border: 1.5px solid ${borderColor};
 
   background: ${backgroundColor};

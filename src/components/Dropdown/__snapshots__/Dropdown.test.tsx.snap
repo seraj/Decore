@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown should render correctly 1`] = `
+.c0 {
+  position: relative;
+  cursor: pointer;
+}
+
+.c0.open > .dropdown-menu {
+  display: block;
+}
+
+.c0 .caret {
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: 4px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.c0 .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 1rem;
+  text-align: left;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #E5E5E5;
+  border-radius: 0;
+}
+
+.c0 .dropdown-menu li {
+  cursor: pointer;
+}
+
+.c0 .dropdown-menu li:hover {
+  background: #E5E5E5;
+}
+
+.c0 .dropdown-menu li > a {
+  display: block;
+  padding: 5px 20px;
+  color: #333333;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0.4rem 1.2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 0px;
+  border: 1.5px solid transparent;
+  background: #3abf7c;
+  color: #ffffff;
+}
+
+.c1 .c2 {
+  margin-right: 0.5em;
+}
+
+.c1 .c2 svg {
+  width: 0.8em;
+  fill: #ffffff;
+}
+
+.c1:disabled {
+  background: #E5E5E5;
+  color: theme.colors.mono[500];
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c1.light {
+  background: #f5f5f5;
+  border-radius: 1px;
+  color: #333;
+  border: none;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #5FDD9D;
+}
+
+.c1:hover .c2 svg {
+  fill: #ffffff;
+}
+
+.c1:active {
+  background-color: #1B8B5C;
+  box-shadow: none !important;
+}
+
+.c1:active .c2 svg {
+  fill: #ffffff;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+  >
+    test
+     
+    <span
+      className="caret"
+    />
+  </button>
+  <ul
+    className="dropdown-menu"
+  >
+    Test
+  </ul>
+</div>
+`;
