@@ -19,9 +19,9 @@ const StyledInput = styled.input<InputProps>`
     }
 
     return `
-      border: 1.5px solid ${borderColor};
+      border: ${theme.borders.width}px solid ${borderColor};
       background-color: ${backgroundColor};
-      padding: 1rem 0.8rem;
+      padding: ${theme.padding.input};
       height: 45px;
       border-radius: ${theme.borders.radius}px;
       color: ${textColor};

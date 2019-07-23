@@ -58,6 +58,7 @@ interface Icons {
 
 interface Borders {
   radius: number;
+  width: number;
 }
 
 interface Fonts {
@@ -77,6 +78,8 @@ interface Paddings {
     normal: string;
     compact: string;
   };
+  input: string;
+  select: string;
 }
 export interface Theme {
   colors: Colors;
@@ -131,13 +134,16 @@ const theme: Theme = {
     }
   },
   borders: {
-    radius: 0
+    radius: 0,
+    width: 1.5
   },
   padding: {
     table: {
       normal: "7px 5px",
       compact: "20px 5px"
-    }
+    },
+    input: "1rem 0.8rem",
+    select: ".6em 2.2em .5em .8em"
   },
 
   animations: {
