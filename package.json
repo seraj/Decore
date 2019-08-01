@@ -8,7 +8,7 @@
     "compile": "tsc",
     "test": "jest",
     "lint": "eslint src --ext .ts,.tsx --fix",
-    "format": "prettier --write '**/*.{js,jsx,css,scss,tsx,ts}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,css,scss,tsx,ts}'",
     "generate": "plop --plopfile ./.plop/plop.config.js",
     "deploy-storybook": "storybook-to-ghpages",
     "storybook": "start-storybook -p 4008",
