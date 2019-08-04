@@ -20,3 +20,4 @@ export { default as Table } from "./components/Table";
 export { default as Textarea } from "./components/Textarea";
 export { default as Toast } from "./components/Toast";
 export { default as Toggle } from "./components/Toggle";
+export { default as BurgerMenu } from "./components/BurgerMenu";
