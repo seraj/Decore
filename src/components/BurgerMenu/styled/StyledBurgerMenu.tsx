@@ -15,7 +15,10 @@ export const BurgerMenuCustomStyle = styled.div`
     height: 30px;
     margin-left: 36px;
   }
-
+  .bm-overlay,
+  .bm-menu-wrap {
+    top: 0;
+  }
   .right .bm-burger-button {
     left: initial;
     right: 36px;
