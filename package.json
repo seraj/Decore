@@ -1,5 +1,5 @@
 {
-  "name": "logickit-decore",
+  "name": "@logickit/logickit-decore",
   "version": "1.0.0",
   "description": "Decore is Logickit UI KIT Package",
   "main": "build/lib/index.js",
@@ -25,14 +25,12 @@
     "url": "git+https://github.com/logickit-io/Decore.git"
   },
   "keywords": [
-    "jest",
-    "react",
-    "typescript",
-    "boilerplate",
-    "storybook"
+    "decore",
+    "uikit",
+    "logickit"
   ],
   "author": "Logickit <info@logickit.com>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/logickit-io/Decore/issues"
   },
