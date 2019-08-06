@@ -1,4 +1,5 @@
 node_modules
+build
 storybook-static
 .DS_Store
 .cache-loader
