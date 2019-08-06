@@ -1,0 +1,11 @@
+src
+storybook-static
+.plop
+.storybook
+.prettierrc
+/prettierignore
+jest.config.js
+.eslintrc
+.eslintignore
+.cache-loader
+.DS_Store
