@@ -5,7 +5,7 @@ import Image from "./Image";
 
 describe("Image", () => {
   it.skip("should render correctly", () => {
-    const component = themed(<Image src="test" />).toJSON();
+    const component = themed(<Image>Test</Image>).toJSON();
 
     expect(component).toMatchSnapshot();
   });

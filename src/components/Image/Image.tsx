@@ -35,7 +35,7 @@ class Image extends React.Component<ImageProps, ImageState> {
       });
       source = `${parseUrl.url}?${query}`;
     } else {
-      source = parseUrl.url;
+      source = src;
     }
     return source;
   };
