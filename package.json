@@ -1,6 +1,6 @@
 {
   "name": "@logickit/logickit-decore",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Decore is Logickit UI KIT Package",
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
@@ -37,7 +37,6 @@
   "homepage": "https://github.com/logickit-io/Decore#readme",
   "dependencies": {
     "@types/bootstrap": "^4.3.1",
-    "@types/query-string": "^6.3.0",
     "@types/react-burger-menu": "^2.2.5",
     "@types/react-inlinesvg": "^0.8.1",
     "@types/react-lazyload": "^2.5.0",
