@@ -2,7 +2,7 @@ import * as React from "react";
 import LazyLoad from "react-lazyload";
 import { CSSTransition } from "react-transition-group";
 import { withTheme } from "styled-components";
-
+import queryString from "query-string";
 import StyledImage from "./styled/StyledImage";
 import ImageProps from "./Image.props";
 
@@ -27,10 +27,15 @@ class Image extends React.Component<ImageProps, ImageState> {
     src: string | undefined
   ) => {
     let source;
+    const parseUrl = queryString.parseUrl(src || "");
     if (height !== undefined && width !== undefined && resize) {
-      source = `${src}?resize=${width}x${height}`;
+      const query = queryString.stringify({
+        ...parseUrl.query,
+        resize: `${width}x${height}`
+      });
+      source = `${parseUrl.url}?${query}`;
     } else {
-      source = src;
+      source = parseUrl.url;
     }
     return source;
   };
