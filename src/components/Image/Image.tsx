@@ -20,13 +20,32 @@ class Image extends React.Component<ImageProps, ImageState> {
     });
   };
 
+  private handleImageSource = (
+    height: string | number | undefined,
+    width: string | number | undefined,
+    resize: boolean | undefined,
+    src: string | undefined
+  ) => {
+    let source;
+    if (height !== undefined && width !== undefined && resize) {
+      source = `${src}?resize=${width}x${height}`;
+    } else {
+      source = src;
+    }
+    return source;
+  };
   public render() {
     const {
-      props: { lazy, theme, ...props },
+      props: { lazy, theme, src, ...props },
       state: { loaded }
     } = this;
-
-    const image = <StyledImage {...props} onLoad={this.onLoad} />;
+    const source = this.handleImageSource(
+      props.height,
+      props.width,
+      props.resize,
+      src
+    );
+    const image = <StyledImage src={source} {...props} onLoad={this.onLoad} />;
 
     if (lazy) {
       return (

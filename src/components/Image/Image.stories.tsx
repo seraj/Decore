@@ -15,6 +15,7 @@ stories.add(
         lazy={true}
         src={`https://dummyimage.com/200x600/000/fff.jpg?text=${Date.now()}`}
         height={640}
+        width={250}
       />
       <br />
       <Image
@@ -22,6 +23,8 @@ stories.add(
         src={`https://dummyimage.com/200x600/000/fff.jpg?text=${Date.now() +
           1}`}
         height={640}
+        width={250}
+        resize
       />
       <br />
       <Image
