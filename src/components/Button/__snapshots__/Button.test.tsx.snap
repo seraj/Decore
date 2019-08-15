@@ -30,17 +30,11 @@ exports[`Button should render correctly 1`] = `
   color: #ffffff;
 }
 
-.c0 span {
-  margin-left: 0;
-}
-
 .c0 .c1 {
-  display: inline-block;
   margin-right: 0.5em;
 }
 
 .c0 .c1 svg {
-  width: 0.8em;
   fill: #ffffff;
 }
 

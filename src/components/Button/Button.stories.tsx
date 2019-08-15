@@ -46,6 +46,7 @@ stories.add(
         secondary={boolean("Secondary", false)}
         outline={boolean("Outline", false)}
         loading={boolean("Loading", false)}
+        icon={<Icon src={defaultIcon} />}
         dSize={select(
           "Size",
           [Size.mini, Size.small, Size.normal, Size.big, Size.huge],
@@ -54,7 +55,7 @@ stories.add(
         radius={number("Border Radius", 0)}
         onClick={action("onClick")}
       >
-        <Icon src={defaultIcon} /> {text("Label", "Default")}
+        {text("Label", "Default")}
       </Button>
     </div>
   ))
