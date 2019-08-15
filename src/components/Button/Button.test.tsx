@@ -5,7 +5,7 @@ import Button from "./Button";
 
 describe("Button", () => {
   it("should render correctly", () => {
-    const component = themed(<Button onClick={jest.fn}>Test</Button>).toJSON();
+    const component = themed(<Button onClick={jest.fn}> Test</Button>).toJSON();
 
     expect(component).toMatchSnapshot();
   });

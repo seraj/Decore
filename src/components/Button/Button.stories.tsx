@@ -27,6 +27,7 @@ stories.add(
         disabled={boolean("Disabled", false)}
         secondary={boolean("Secondary", false)}
         outline={boolean("Outline", false)}
+        loading={boolean("Loading", false)}
         dSize={select(
           "Size",
           [Size.mini, Size.small, Size.normal, Size.big, Size.huge],
@@ -44,6 +45,7 @@ stories.add(
         disabled={boolean("Disabled", false)}
         secondary={boolean("Secondary", false)}
         outline={boolean("Outline", false)}
+        loading={boolean("Loading", false)}
         dSize={select(
           "Size",
           [Size.mini, Size.small, Size.normal, Size.big, Size.huge],

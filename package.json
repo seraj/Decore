@@ -1,6 +1,6 @@
 {
   "name": "@logickit/logickit-decore",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Decore is Logickit UI KIT Package",
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
@@ -16,8 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run format",
-      "pre-push": "npm run test"
+      "pre-commit": "npm run lint && npm run format && npm run test"
     }
   },
   "repository": {

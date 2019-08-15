@@ -30,7 +30,12 @@ exports[`Button should render correctly 1`] = `
   color: #ffffff;
 }
 
+.c0 span {
+  margin-left: 0;
+}
+
 .c0 .c1 {
+  display: inline-block;
   margin-right: 0.5em;
 }
 
@@ -75,8 +80,12 @@ exports[`Button should render correctly 1`] = `
 
 <button
   className="c0"
+  disabled={false}
+  loading={false}
   onClick={[Function]}
 >
-  Test
+  <span>
+     Test
+  </span>
 </button>
 `;

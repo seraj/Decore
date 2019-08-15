@@ -5,7 +5,7 @@ import { Size } from "../../../theme/Theme.props";
 import Icon from "../../Icon/styled/StyledIcon";
 
 const StyledButton = styled.button<ButtonProps>`
-  ${({ disabled, secondary, outline, dSize, theme }) => {
+  ${({ disabled, loading, secondary, outline, dSize, theme }) => {
     const color = secondary ? theme.colors.secondary : theme.colors.primary;
     const textColor = outline ? color.normal : theme.colors.text.light;
     const borderColor = outline ? color.normal : "transparent";
@@ -27,8 +27,13 @@ const StyledButton = styled.button<ButtonProps>`
 
   background: ${backgroundColor};
   color: ${textColor};
-
+    span {
+      margin-left:${loading ? "8px" : "0"};
+    }
+  
   ${Icon} {
+      display:${loading ? "none" : "inline-block"};
+    
     margin-right: 0.5em;
 
     svg {
@@ -70,5 +75,18 @@ const StyledButton = styled.button<ButtonProps>`
 `;
   }}
 `;
-
+export const StyledLoading = styled.i`
+  display: inline-block;
+  animation: Loading 1s infinite linear;
+  @keyframes Loading {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+`;
 export default StyledButton;
