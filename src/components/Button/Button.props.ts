@@ -7,5 +7,5 @@ export default interface ButtonProps
     React.ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
   loading?: boolean;
-  icon?: string | URL | ReactNode;
+  icon?: ReactNode;
 }
