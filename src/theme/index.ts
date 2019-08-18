@@ -5,8 +5,11 @@ interface Colors {
     normal: string;
     hover: string;
     active: string;
-
     light: string;
+
+    outline: {
+      background: string;
+    };
   };
 
   secondary: {
@@ -14,7 +17,9 @@ interface Colors {
     hover: string;
     active: string;
 
-    light: string;
+    outline: {
+      background: string;
+    };
   };
 
   success: string;
@@ -96,16 +101,23 @@ const theme: Theme = {
 
     primary: {
       normal: "#3abf7c",
-      hover: "#5FDD9D",
+      hover: "rgba(58, 191, 124, 0.72)",
       active: "#1B8B5C",
-      light: "rgba(58, 191, 124, 0.08)"
+      light: "rgba(58, 191, 124, 0.04)",
+
+      outline: {
+        background: "rgba(27, 139, 92, 0.04)"
+      }
     },
+
     secondary: {
       normal: "#ff8686",
-      hover: "#ffc2c2",
-      active: "#c20000",
+      hover: "#ff8686",
+      active: "#ff8686",
 
-      light: "rgba(255, 133, 133, 0.08)"
+      outline: {
+        background: "rgba(27, 139, 92, 0.04)"
+      }
     },
 
     error: "#DB504A",

@@ -8,8 +8,18 @@ const StyledButton = styled.button<ButtonProps>`
   ${({ secondary, outline, dSize, theme }) => {
     const color = secondary ? theme.colors.secondary : theme.colors.primary;
     const textColor = outline ? color.normal : theme.colors.text.light;
+    const textColorHover = outline ? color.hover : theme.colors.text.light;
+    const textColorActive = outline ? color.active : theme.colors.text.light;
     const borderColor = outline ? color.normal : "transparent";
-    const backgroundColor = outline ? color.light : color.normal;
+    const borderColorHover = outline ? color.hover : "transparent";
+    const borderColorActive = outline ? color.active : "transparent";
+    const backgroundColor = outline ? color.outline.background : color.normal;
+    const backgroundColorHover = outline
+      ? color.outline.background
+      : color.normal;
+    const backgroundColorActive = outline
+      ? color.outline.background
+      : color.active;
 
     return `
   display: flex;
@@ -35,10 +45,14 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:disabled {
-    background: ${theme.colors.mono[300]}
-    color: theme.colors.mono[500];
+    background: ${theme.colors.mono[300]};
+    color: ${theme.colors.mono[500]};
+    border-color: ${theme.colors.mono[300]};
     cursor: not-allowed;
     pointer-events: none;
+    ${Icon} svg {
+      fill: ${theme.colors.mono[500]};
+    }
   }
 
   &.light {
@@ -50,15 +64,18 @@ const StyledButton = styled.button<ButtonProps>`
 
   &:hover {
     text-decoration: none;
-    color: ${textColor};
-    background-color: ${color.hover};
+    color: ${textColorHover};
+    border-color: ${borderColorHover};
+    background-color: ${backgroundColorHover};
     ${Icon} svg {
       fill: ${textColor};
     }
   }
 
   &:active {
-    background-color: ${color.active};
+    color: ${textColorActive};
+    border-color: ${borderColorActive};
+    background-color: ${backgroundColorActive};
     box-shadow: none !important;
     ${Icon} svg {
       fill: ${textColor};
