@@ -56,7 +56,7 @@ exports[`Radio should render correctly 1`] = `
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 50%;
   border: 1.5px solid #999999;
 }
 

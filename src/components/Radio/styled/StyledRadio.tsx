@@ -24,7 +24,7 @@ const StyledRadio = styled.span<RadioProps>`
         width: 20px;
         transition: 0.3s;
         background-color: ${theme.colors.light};
-        border-radius: 10px;
+        border-radius: 50%;
         border: ${theme.borders.width}px solid ${
     checked ? theme.colors.mono[700] : theme.colors.mono[500]
   };
@@ -52,7 +52,7 @@ const StyledRadio = styled.span<RadioProps>`
                 left: 4.5px;
                 width: 8px;
                 height: 8px;
-                border-radius: 10px;
+                border-radius: 50%;
                 transition: 0.3s;
                 background-color: ${theme.colors.mono[700]};
             }
