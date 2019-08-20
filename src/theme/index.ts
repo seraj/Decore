@@ -5,7 +5,6 @@ interface Colors {
     normal: string;
     hover: string;
     active: string;
-    light: string;
 
     outline: {
       background: string;
@@ -103,7 +102,6 @@ const theme: Theme = {
       normal: "#3abf7c",
       hover: "rgba(58, 191, 124, 0.6)",
       active: "#1B8B5C",
-      light: "rgba(58, 191, 124, 0.04)",
 
       outline: {
         background: "rgba(27, 139, 92, 0.04)"
@@ -111,12 +109,12 @@ const theme: Theme = {
     },
 
     secondary: {
-      normal: "#ff8686",
-      hover: "#ff8686",
-      active: "#ff8686",
-
+      normal: "#FF8686",
+      hover: "rgba(255, 134, 134, 0.6)",
+      active: "#C63F3F",
+      
       outline: {
-        background: "rgba(27, 139, 92, 0.04)"
+        background: "rgba(255, 134, 134, 0.04)"
       }
     },
 
