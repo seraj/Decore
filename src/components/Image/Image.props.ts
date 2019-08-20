@@ -5,6 +5,7 @@ export default interface ImageProps
   extends ThemeProps,
     React.ImgHTMLAttributes<HTMLImageElement> {
   lazy?: boolean;
+  offset?: number;
   resize?: boolean;
   theme: Theme;
 }

@@ -36,6 +36,7 @@ stories.add(
       <br />
       <Image
         lazy={true}
+        offset={500}
         src={`https://dummyimage.com/200x600/000/fff.jpg?text=${Date.now() +
           3}`}
         height={640}

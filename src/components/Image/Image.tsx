@@ -41,7 +41,7 @@ class Image extends React.Component<ImageProps, ImageState> {
   };
   public render() {
     const {
-      props: { lazy, theme, src, ...props },
+      props: { lazy, offset, theme, src, ...props },
       state: { loaded }
     } = this;
     const source = this.handleImageSource(
@@ -54,7 +54,7 @@ class Image extends React.Component<ImageProps, ImageState> {
 
     if (lazy) {
       return (
-        <LazyLoad height={props.height}>
+        <LazyLoad height={props.height} offset={offset}>
           <CSSTransition
             timeout={theme.animations.duration}
             in={loaded}
