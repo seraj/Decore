@@ -3,8 +3,37 @@
 exports[`Textarea should render correctly 1`] = `
 .c0 {
   border: 1.5px solid #999999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #ffffff;
+  padding: 1rem 0.8rem;
+  height: 42px;
+  border-radius: 3px;
   padding: 0.6em 0.8em;
   color: #333333;
+  height: 72px;
+}
+
+.c0:hover {
+  border-color: #333333;
+  color: #666666;
+}
+
+.c0:active {
+  color: #333333;
+}
+
+.c0:focus {
+  color: #333333;
+  border-color: #ffffff;
+}
+
+.c0:disabled {
+  border: none;
+  background: #E5E5E5;
+  color: #999999;
+  cursor: not-allowed !important;
+  pointer-events: none;
 }
 
 <textarea

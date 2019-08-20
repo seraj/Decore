@@ -6,7 +6,7 @@ exports[`Select should render correctly 1`] = `
   padding: .6em 2.2em .5em .8em;
   height: 45px;
   border: 1.5px solid #999999;
-  border-radius: 0px;
+  border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

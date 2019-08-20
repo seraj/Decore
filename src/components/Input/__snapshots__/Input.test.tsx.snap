@@ -3,18 +3,31 @@
 exports[`Input should render correctly 1`] = `
 .c0 {
   border: 1.5px solid #999999;
-  background-color: undefined;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #ffffff;
   padding: 1rem 0.8rem;
-  height: 45px;
-  border-radius: 0px;
-  color: #333333;
+  height: 42px;
+  border-radius: 3px;
+  color: #666666;
 }
 
 .c0:hover {
   border-color: #333333;
+  color: #666666;
+}
+
+.c0:active {
+  color: #333333;
+}
+
+.c0:focus {
+  color: #333333;
+  border-color: #ffffff;
 }
 
 .c0:disabled {
+  border: none;
   background: #E5E5E5;
   color: #999999;
   cursor: not-allowed !important;

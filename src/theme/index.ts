@@ -101,7 +101,7 @@ const theme: Theme = {
 
     primary: {
       normal: "#3abf7c",
-      hover: "rgba(58, 191, 124, 0.72)",
+      hover: "rgba(58, 191, 124, 0.6)",
       active: "#1B8B5C",
       light: "rgba(58, 191, 124, 0.04)",
 
@@ -146,7 +146,7 @@ const theme: Theme = {
     }
   },
   borders: {
-    radius: 0,
+    radius: 3,
     width: 1.5
   },
   padding: {

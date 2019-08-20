@@ -8,18 +8,18 @@ const StyledButton = styled.button<ButtonProps>`
   ${({ secondary, outline, dSize, theme }) => {
     const color = secondary ? theme.colors.secondary : theme.colors.primary;
     const textColor = outline ? color.normal : theme.colors.text.light;
-    const textColorHover = outline ? color.hover : theme.colors.text.light;
-    const textColorActive = outline ? color.active : theme.colors.text.light;
     const borderColor = outline ? color.normal : "transparent";
-    const borderColorHover = outline ? color.hover : "transparent";
-    const borderColorActive = outline ? color.active : "transparent";
     const backgroundColor = outline ? color.outline.background : color.normal;
-    const backgroundColorHover = outline
-      ? color.outline.background
-      : color.normal;
+    const textColorActive = outline ? color.active : theme.colors.text.light;
+    const borderColorActive = outline ? color.active : "transparent";
     const backgroundColorActive = outline
       ? color.outline.background
       : color.active;
+    const textColorHover = outline ? color.hover : theme.colors.text.light;
+    const borderColorHover = outline ? color.hover : "transparent";
+    const backgroundColorHover = outline
+      ? color.outline.background
+      : color.hover;
 
     return `
   display: flex;
@@ -27,19 +27,22 @@ const StyledButton = styled.button<ButtonProps>`
   padding: 0.4rem 1.2rem;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 500;
   font-size: ${dSize == Size.big ? `20px` : `14px`};
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
   border-radius: ${theme.borders.radius}px;
-  border: 1.5px solid ${borderColor};
+  border: ${theme.borders.width}px solid ${borderColor};
+  :focus{ outline: none; }
+
 
   background: ${backgroundColor};
   color: ${textColor};
   ${Icon} {
     margin-right: 0.5em;
   svg {
+      transition: 0.3s;
       fill: ${textColor};
     }
   }
@@ -59,7 +62,7 @@ const StyledButton = styled.button<ButtonProps>`
     background: #f5f5f5;
     border-radius: 1px;
     color: #333;
-    border: none;
+    outline: none;
   }
 
   &:hover {
@@ -68,7 +71,8 @@ const StyledButton = styled.button<ButtonProps>`
     border-color: ${borderColorHover};
     background-color: ${backgroundColorHover};
     ${Icon} svg {
-      fill: ${textColor};
+      transition: 0.3s;
+      fill: ${textColorHover};
     }
   }
 
@@ -78,7 +82,8 @@ const StyledButton = styled.button<ButtonProps>`
     background-color: ${backgroundColorActive};
     box-shadow: none !important;
     ${Icon} svg {
-      fill: ${textColor};
+      transition: 0.3s;
+      fill: ${textColorActive};
     }
   }
 `;

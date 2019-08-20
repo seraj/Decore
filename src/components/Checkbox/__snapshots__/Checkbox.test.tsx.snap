@@ -3,18 +3,31 @@
 exports[`Checkbox should render correctly 1`] = `
 .c3 {
   border: 1.5px solid #999999;
-  background-color: undefined;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #ffffff;
   padding: 1rem 0.8rem;
-  height: 45px;
-  border-radius: 0px;
-  color: #333333;
+  height: 42px;
+  border-radius: 3px;
+  color: #666666;
 }
 
 .c3:hover {
   border-color: #333333;
+  color: #666666;
+}
+
+.c3:active {
+  color: #333333;
+}
+
+.c3:focus {
+  color: #333333;
+  border-color: #ffffff;
 }
 
 .c3:disabled {
+  border: none;
   background: #E5E5E5;
   color: #999999;
   cursor: not-allowed !important;
@@ -45,6 +58,8 @@ exports[`Checkbox should render correctly 1`] = `
   position: absolute;
   white-space: nowrap;
   width: 1px !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .c4 {
@@ -52,12 +67,18 @@ exports[`Checkbox should render correctly 1`] = `
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border-color: #999999;
+  border: 1.5px solid #999999;
+  border-radius: 2px;
   border-width: 1.5px;
   border-style: solid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .c4:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
   border-color: #666666;
 }
 
@@ -90,7 +111,7 @@ exports[`Checkbox should render correctly 1`] = `
 .c4 svg {
   visibility: hidden;
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 3px;
 }
 

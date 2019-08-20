@@ -3,9 +3,9 @@ import InputProps from "../Input.props";
 
 const StyledInput = styled.input<InputProps>`
   ${({ dark, success, fluid, error, theme }) => {
-    const backgroundColor = dark ? theme.colors.mono[200] : theme.colors.white;
+    const backgroundColor = dark ? theme.colors.mono[200] : theme.colors.light;
 
-    let textColor = theme.colors.text.dark;
+    let textColor = theme.colors.mono[600];
     let borderColor = theme.colors.mono[500];
     let borderColorHover = theme.colors.mono[700];
     if (success) {
@@ -20,9 +20,10 @@ const StyledInput = styled.input<InputProps>`
 
     return `
       border: ${theme.borders.width}px solid ${borderColor};
+      transition: 0.3s;
       background-color: ${backgroundColor};
       padding: ${theme.padding.input};
-      height: 45px;
+      height: 42px;
       border-radius: ${theme.borders.radius}px;
       color: ${textColor};
  ${
@@ -34,9 +35,20 @@ const StyledInput = styled.input<InputProps>`
  }
       &:hover {
         border-color: ${borderColorHover};
+        color: ${textColor};
+      }
+
+      &:active {                
+        color: ${borderColorHover};        
+      }
+
+      &:focus {              
+        color: ${borderColorHover};
+        border-color: ${theme.colors.light};
       }
 
       &:disabled {
+        border: none;
         background: ${theme.colors.mono[300]};
         color: ${theme.colors.mono[500]};
         cursor: not-allowed !important;

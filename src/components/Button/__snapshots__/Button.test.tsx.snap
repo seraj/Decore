@@ -18,16 +18,20 @@ exports[`Button should render correctly 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
   text-align: center;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border-radius: 0px;
+  border-radius: 3px;
   border: 1.5px solid transparent;
   background: #3abf7c;
   color: #ffffff;
+}
+
+.c0:focus {
+  outline: none;
 }
 
 .c0 .c1 {
@@ -35,6 +39,8 @@ exports[`Button should render correctly 1`] = `
 }
 
 .c0 .c1 svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   fill: #ffffff;
 }
 
@@ -54,7 +60,7 @@ exports[`Button should render correctly 1`] = `
   background: #f5f5f5;
   border-radius: 1px;
   color: #333;
-  border: none;
+  outline: none;
 }
 
 .c0:hover {
@@ -62,10 +68,12 @@ exports[`Button should render correctly 1`] = `
   text-decoration: none;
   color: #ffffff;
   border-color: transparent;
-  background-color: #3abf7c;
+  background-color: rgba(58,191,124,0.6);
 }
 
 .c0:hover .c1 svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   fill: #ffffff;
 }
 
@@ -77,6 +85,8 @@ exports[`Button should render correctly 1`] = `
 }
 
 .c0:active .c1 svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   fill: #ffffff;
 }
 
