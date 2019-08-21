@@ -1,4 +1,4 @@
-import { text, withKnobs } from "@storybook/addon-knobs";
+import { text, boolean, withKnobs } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
 import wInfo from "../../utils/wInfo";
@@ -11,6 +11,14 @@ stories.add(
   "default",
   wInfo()(() => (
     <div>
+      <Image
+        lazy={true}
+        src={`https://dummyimage.com/200x600/000/fff.jpg?text=${Date.now()}`}
+        height={text("height (number)", "100")}
+        width={text("width (number)", "100")}
+        resize={boolean("resize", false)}
+      />
+      <br />
       <Image
         lazy={true}
         src={`https://dummyimage.com/200x600/000/fff.jpg?text=${Date.now()}`}
@@ -41,7 +49,6 @@ stories.add(
           3}`}
         height={640}
       />
-      <br />
     </div>
   ))
 );

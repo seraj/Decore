@@ -29,32 +29,20 @@ class Image extends React.Component<ImageProps, ImageState> {
     let source;
     const parseURL = parseUrl(src || "");
     if (resize) {
-      let query;
-      if (!isNaN(Number(height)) && isNaN(Number(width))) {
-        query = stringify({
+      const numbers = { width: Number(width), height: Number(height) };
+
+      if (numbers.width || numbers.height) {
+        const w = numbers.width || numbers.height;
+        const h = numbers.height || numbers.width;
+
+        const query = stringify({
           ...parseURL.query,
-          resize: `${height}x${height}`
+          resize: `${w}x${h}`
         });
-        source = `${parseURL.url}?${query}`;
-      } else if (!isNaN(Number(width)) && isNaN(Number(height))) {
-        query = stringify({
-          ...parseURL.query,
-          resize: `${width}x${width}`
-        });
-        source = `${parseURL.url}?${query}`;
-      } else if (!isNaN(Number(height)) && !isNaN(Number(width))) {
-        query = stringify({
-          ...parseURL.query,
-          resize: `${width}x${height}`
-        });
-        source = `${parseURL.url}?${query}`;
-      } else {
-        source = src;
+        return `${parseURL.url}?${query}`;
       }
-    } else {
-      source = src;
     }
-    return source;
+    return src;
   };
   public render() {
     const {
