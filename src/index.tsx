@@ -21,3 +21,4 @@ export { default as Textarea } from "./components/Textarea";
 export { default as Toast } from "./components/Toast";
 export { default as Toggle } from "./components/Toggle";
 export { default as BurgerMenu } from "./components/BurgerMenu";
+export { default as Accordion } from "./components/Accordion";

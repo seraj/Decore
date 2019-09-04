@@ -112,7 +112,7 @@ const theme: Theme = {
       normal: "#FF8686",
       hover: "rgba(255, 134, 134, 0.6)",
       active: "#C63F3F",
-      
+
       outline: {
         background: "rgba(255, 134, 134, 0.04)"
       }

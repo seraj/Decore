@@ -10,18 +10,18 @@ const StyledButton = styled.button<ButtonProps>`
     const textColor = outline ? color.normal : theme.colors.text.light;
     const borderColor = outline ? color.normal : "transparent";
     const backgroundColor = outline ? color.outline.background : color.normal;
-    
+
     const textColorHover = outline ? color.hover : theme.colors.text.light;
     const borderColorHover = outline ? color.hover : "transparent";
     const backgroundColorHover = outline
       ? color.outline.background
       : color.hover;
-    
+
     const textColorActive = outline ? color.active : theme.colors.text.light;
     const borderColorActive = outline ? color.active : "transparent";
     const backgroundColorActive = outline
       ? color.outline.background
-      : color.active;    
+      : color.active;
 
     return `
   display: flex;

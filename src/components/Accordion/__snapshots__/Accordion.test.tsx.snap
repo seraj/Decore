@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should render correctly 1`] = `
+.c0 {
+  overflow: hidden;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.c0 .accordion-content {
+  display: block;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  line-height: 40px;
+  padding: 0 1em;
+}
+
+.c0 .accordion-label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.c0 .accordion-label::after {
+  content: "\\276F";
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.c0.active .accordion-content {
+  -webkit-transform: perspective(350px);
+  -ms-transform: perspective(350px);
+  transform: perspective(350px);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  height: 50px;
+  line-height: 50px;
+}
+
+.c0.active .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c0.inactive .accordion-content {
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: perspective(250px);
+  -ms-transform: perspective(250px);
+  transform: perspective(250px);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  height: 0;
+}
+
+<div
+  className="inactive c0"
+>
+  <span
+    className="accordion-label"
+    onClick={[Function]}
+  />
+  <span
+    className="accordion-content"
+  >
+    Test
+  </span>
+</div>
+`;
