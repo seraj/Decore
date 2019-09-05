@@ -8,7 +8,6 @@ const StyledAccordion = styled.div<AccordionProps>`
       .accordion-content {
         display: block;
         transition: all 0.2s ease-in;
-        line-height: 40px;
         padding: 0 1em;
     }
     .accordion-label {
@@ -26,8 +25,6 @@ const StyledAccordion = styled.div<AccordionProps>`
       .accordion-content {
         transform: perspective(350px);
         transition: all 0.4s ease-in-out;
-        height: 50px;
-        line-height: 50px;
     }
       .accordion-label {
         &::after  {
