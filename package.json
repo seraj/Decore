@@ -1,6 +1,6 @@
 {
   "name": "@logickit/logickit-decore",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Decore is Logickit UI KIT Package",
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",

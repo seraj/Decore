@@ -10,6 +10,7 @@ exports[`Accordion should render correctly 1`] = `
   display: block;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  line-height: 20px;
   padding: 0 1em;
 }
 
@@ -38,6 +39,8 @@ exports[`Accordion should render correctly 1`] = `
   transform: perspective(350px);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  height: 100%;
+  line-height: 30px;
 }
 
 .c0.active .accordion-label::after {

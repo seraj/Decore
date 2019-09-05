@@ -11,7 +11,14 @@ stories.add(
   "default",
   wInfo()(() => (
     <>
-      <Accordion question="Hey!">This is Test</Accordion>
+      <Accordion question="Hey!">
+        This is Test
+        <br />
+        This is Test
+        <br />
+        This is Test
+        <br />
+      </Accordion>
       <Accordion question="Hey!">This is Test</Accordion>
     </>
   ))
