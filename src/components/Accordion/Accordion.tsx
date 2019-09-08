@@ -10,7 +10,7 @@ class Accordion extends React.Component<AccordionProps, AccordionState> {
   public state = {
     active: false
   };
-  public toggle = (event: React.MouseEvent) => {
+  private toggle = (event: React.MouseEvent) => {
     this.setState({
       active: !this.state.active
     });
