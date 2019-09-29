@@ -11,7 +11,7 @@ stories.add(
   "default",
   wInfo()(() => (
     <>
-      <Accordion question="Hey!">
+      <Accordion question="Hey!" active>
         This is Test
         <br />
         This is Test

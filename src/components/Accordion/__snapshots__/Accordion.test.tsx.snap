@@ -7,11 +7,18 @@ exports[`Accordion should render correctly 1`] = `
 }
 
 .c0 .accordion-content {
-  display: block;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  line-height: 20px;
+  width: 100%;
+  display: none;
   padding: 0 1em;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-animation: fadein 0.25s ease-in;
+  animation: fadein 0.25s ease-in;
 }
 
 .c0 .accordion-label {
@@ -34,31 +41,13 @@ exports[`Accordion should render correctly 1`] = `
 }
 
 .c0.active .accordion-content {
-  -webkit-transform: perspective(350px);
-  -ms-transform: perspective(350px);
-  transform: perspective(350px);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  height: 100%;
-  line-height: 30px;
+  display: block;
 }
 
 .c0.active .accordion-label::after {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-}
-
-.c0.inactive .accordion-content {
-  -webkit-transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  transform-origin: 50% 0%;
-  -webkit-transform: perspective(250px);
-  -ms-transform: perspective(250px);
-  transform: perspective(250px);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  height: 0;
 }
 
 <div

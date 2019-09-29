@@ -2,14 +2,15 @@ import styled from "styled-components";
 import AccordionProps from "../Accordion.props";
 
 const StyledAccordion = styled.div<AccordionProps>`
-  ${({ theme }) => `
       overflow: hidden;
       border-bottom:1px solid #F5F5F5;
       .accordion-content {
-        display: block;
-        transition: all 0.2s ease-in;
-        line-height: 20px;
-        padding: 0 1em;
+          width: 100%;
+          display:none;
+          padding: 0 1em;
+          flex-direction: column;
+          align-items: flex-start;
+          animation: fadein 0.25s ease-in;
     }
     .accordion-label {
         display: flex;
@@ -24,10 +25,7 @@ const StyledAccordion = styled.div<AccordionProps>`
     }
     &.active {
       .accordion-content {
-        transform: perspective(350px);
-        transition: all 0.4s ease-in-out;
-        height: 100%;
-        line-height: 30px;
+        display:block;  
     }
       .accordion-label {
         &::after  {
@@ -36,15 +34,14 @@ const StyledAccordion = styled.div<AccordionProps>`
       }
     }
 
-    &.inactive {
-      .accordion-content {
-        transform-origin: 50% 0%;
-        transform: perspective(250px);
-        transition: all 0.4s ease-in-out;
-        height: 0;
+    @keyframes fadein {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
       }
     }
-  `}
 `;
 
 export default StyledAccordion;
