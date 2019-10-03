@@ -1,4 +1,3 @@
-import { darken } from "polished";
 import styled from "styled-components";
 import ButtonProps from "../Button.props";
 import { Size } from "../../../theme/Theme.props";
@@ -6,7 +5,7 @@ import Icon from "../../Icon/styled/StyledIcon";
 
 const StyledButton = styled.button<ButtonProps>`
   ${({ secondary, outline, dSize, theme }) => {
-    const color = secondary ? theme.colors.secondary : theme.colors.primary;
+    const color = secondary ? theme.colors.secondary : theme.colors.success;
     const textColor = outline ? color.normal : theme.colors.text.light;
     const borderColor = outline ? color.normal : "transparent";
     const backgroundColor = outline ? color.outline.background : color.normal;
