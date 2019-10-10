@@ -1,38 +1,34 @@
 interface Colors {
-  disabled: string;
-
   primary: {
     normal: string;
     hover: string;
     active: string;
-
     outline: {
       background: string;
     };
   };
-
   secondary: {
     normal: string;
     hover: string;
     active: string;
-
     outline: {
       background: string;
     };
   };
-
-  success: {
+  tertiary: {
     normal: string;
     hover: string;
     active: string;
-
     outline: {
       background: string;
     };
   };
+
+  success: string;
   error: string;
   warning: string;
   info: string;
+  disabled: string;
 
   mono: {
     700: string;
@@ -104,40 +100,36 @@ export interface Theme {
 
 const theme: Theme = {
   colors: {
-    disabled: "#E5E5E5",
-
     primary: {
+      normal: "#3abf7c",
+      hover: "rgba(58, 191, 124, 0.6)",
+      active: "#1B8B5C",
+      outline: {
+        background: "rgba(27, 139, 92, 0.04)"
+      }
+    },
+    secondary: {
+      normal: "#FF8686",
+      hover: "rgba(255, 134, 134, 0.6)",
+      active: "#C63F3F",
+      outline: {
+        background: "rgba(255, 134, 134, 0.04)"
+      }
+    },
+    tertiary: {
       normal: "#171c25",
       hover: "rgba(23, 28, 37, 0.8)",
       active: "#191d23",
-
       outline: {
         background: "rgba(23, 28, 37, 0.04)"
       }
     },
 
-    secondary: {
-      normal: "#FF8686",
-      hover: "rgba(255, 134, 134, 0.6)",
-      active: "#C63F3F",
-
-      outline: {
-        background: "rgba(255, 134, 134, 0.04)"
-      }
-    },
-
-    success: {
-      normal: "#3abf7c",
-      hover: "rgba(58, 191, 124, 0.6)",
-      active: "#1B8B5C",
-
-      outline: {
-        background: "rgba(27, 139, 92, 0.04)"
-      }
-    },
+    success: "#3abf7c",
     error: "#DB504A",
     warning: "#FF8552",
     info: "#4D9DE0",
+    disabled: "#E5E5E5",
 
     light: "#ffffff",
     dark: "#333333",

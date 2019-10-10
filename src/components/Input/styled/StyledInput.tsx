@@ -9,7 +9,7 @@ const StyledInput = styled.input<InputProps>`
     let borderColor = theme.colors.mono[500];
     let borderColorHover = theme.colors.mono[700];
     if (success) {
-      borderColor = theme.colors.success.normal;
+      borderColor = theme.colors.success;
       borderColorHover = borderColor;
       textColor = borderColor;
     } else if (error) {
