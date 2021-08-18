@@ -1,6 +1,6 @@
 # Decore
 
-Logickit UI KIT package.
+UI KIT package.
 
 ## Features
 
